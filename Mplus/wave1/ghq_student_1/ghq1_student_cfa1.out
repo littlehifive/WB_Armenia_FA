@@ -1,0 +1,463 @@
+Mplus VERSION 8.4 (Mac)
+MUTHEN & MUTHEN
+12/16/2024   2:26 PM
+
+INPUT INSTRUCTIONS
+
+  Title: Student GHQ Baseline CFA;
+
+  Data:
+     File is ../dat_stu_1.txt;
+
+  Variable:
+     Names are studentid age gender grade country
+     dass1_1 dass2_1 dass3_1 dass4_1 dass5_1 dass6_1 dass7_1
+     dass8_1 dass9_1 dass10_1 dass11_1 dass12_1 dass13_1 dass14_1
+     dass15_1 dass16_1 dass17_1 dass18_1 dass19_1 dass20_1 dass21_1
+     phq1_1 phq2_1 phq3_1 phq4_1 phq5_1 phq6_1 phq7_1 phq8_1
+     gad1_1 gad2_1 gad3_1 gad4_1 gad5_1 gad6_1 gad7_1
+     ghq1_1 ghq2_1 ghq3_1 ghq4_1 ghq5_1 ghq6_1 ghq7_1 ghq8_1
+     ghq9_1 ghq10_1 ghq11_1 ghq12_1
+     erica1_1 erica2_1 erica3_1 erica4_1 erica5_1 erica6_1 erica7_1
+     erica8_1 erica9_1 erica10_1 erica11_1 erica12_1 erica13_1
+     erica14_1 erica15_1 erica16_1 erica17_1
+     sswq1_1 sswq2_1 sswq3_1 sswq4_1 sswq5_1 sswq6_1 sswq7_1
+     sswq8_1 sswq9_1 sswq10_1 sswq11_1 sswq12_1 sswq13_1 sswq14_1
+     sswq15_1 sswq16_1 atti1_1 atti2_1 atti3_1 atti4_1 atti5_1 atti6_1
+     half;
+     Missing are . ;
+
+    Usevariable are
+  	ghq1_1 ghq2_1 ghq3_1 ghq4_1 ghq5_1 ghq6_1 ghq7_1 ghq8_1
+  	ghq9_1 ghq10_1 ghq11_1 ghq12_1;
+
+    Categorical is
+  	ghq1_1 ghq2_1 ghq3_1 ghq4_1 ghq5_1 ghq6_1 ghq7_1 ghq8_1
+  	ghq9_1 ghq10_1 ghq11_1 ghq12_1;
+
+    Idvariable is studentid;
+
+    Useobservations is half eq 0;
+
+  Analysis:
+     Estimator = wlsmv;
+
+  Model:
+    ghqpos_1 by
+      ghq1_1 ghq3_1 ghq4_1 ghq7_1 ghq8_1 ghq12_1;
+    ghqneg_1 by
+      ghq2_1 ghq5_1 ghq6_1 ghq9_1 ghq10_1 ghq11_1;
+
+  Output: sampstat stdyx modindices(all);
+
+
+
+INPUT READING TERMINATED NORMALLY
+
+
+
+Student GHQ Baseline CFA;
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                         270
+
+Number of dependent variables                                   12
+Number of independent variables                                  0
+Number of continuous latent variables                            2
+
+Observed dependent variables
+
+  Binary and ordered categorical (ordinal)
+   GHQ1_1      GHQ2_1      GHQ3_1      GHQ4_1      GHQ5_1      GHQ6_1
+   GHQ7_1      GHQ8_1      GHQ9_1      GHQ10_1     GHQ11_1     GHQ12_1
+
+Continuous latent variables
+   GHQPOS_1    GHQNEG_1
+
+Variables with special functions
+
+  ID variable           STUDENTI
+
+Estimator                                                    WLSMV
+Maximum number of iterations                                  1000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+Maximum number of iterations for H1                           2000
+Convergence criterion for H1                             0.100D-03
+Parameterization                                             DELTA
+Link                                                        PROBIT
+
+Input data file(s)
+  ../dat_stu_1.txt
+
+Input data format  FREE
+
+
+SUMMARY OF DATA
+
+     Number of missing data patterns             1
+
+
+COVARIANCE COVERAGE OF DATA
+
+Minimum covariance coverage value   0.100
+
+
+     PROPORTION OF DATA PRESENT
+
+
+           Covariance Coverage
+              GHQ1_1        GHQ2_1        GHQ3_1        GHQ4_1        GHQ5_1
+              ________      ________      ________      ________      ________
+ GHQ1_1         1.000
+ GHQ2_1         1.000         1.000
+ GHQ3_1         1.000         1.000         1.000
+ GHQ4_1         1.000         1.000         1.000         1.000
+ GHQ5_1         1.000         1.000         1.000         1.000         1.000
+ GHQ6_1         1.000         1.000         1.000         1.000         1.000
+ GHQ7_1         1.000         1.000         1.000         1.000         1.000
+ GHQ8_1         1.000         1.000         1.000         1.000         1.000
+ GHQ9_1         1.000         1.000         1.000         1.000         1.000
+ GHQ10_1        1.000         1.000         1.000         1.000         1.000
+ GHQ11_1        1.000         1.000         1.000         1.000         1.000
+ GHQ12_1        1.000         1.000         1.000         1.000         1.000
+
+
+           Covariance Coverage
+              GHQ6_1        GHQ7_1        GHQ8_1        GHQ9_1        GHQ10_1
+              ________      ________      ________      ________      ________
+ GHQ6_1         1.000
+ GHQ7_1         1.000         1.000
+ GHQ8_1         1.000         1.000         1.000
+ GHQ9_1         1.000         1.000         1.000         1.000
+ GHQ10_1        1.000         1.000         1.000         1.000         1.000
+ GHQ11_1        1.000         1.000         1.000         1.000         1.000
+ GHQ12_1        1.000         1.000         1.000         1.000         1.000
+
+
+           Covariance Coverage
+              GHQ11_1       GHQ12_1
+              ________      ________
+ GHQ11_1        1.000
+ GHQ12_1        1.000         1.000
+
+
+UNIVARIATE PROPORTIONS AND COUNTS FOR CATEGORICAL VARIABLES
+
+    GHQ1_1
+      Category 1    0.567          153.000
+      Category 2    0.433          117.000
+    GHQ2_1
+      Category 1    0.811          219.000
+      Category 2    0.189           51.000
+    GHQ3_1
+      Category 1    0.519          140.000
+      Category 2    0.481          130.000
+    GHQ4_1
+      Category 1    0.596          161.000
+      Category 2    0.404          109.000
+    GHQ5_1
+      Category 1    0.807          218.000
+      Category 2    0.193           52.000
+    GHQ6_1
+      Category 1    0.752          203.000
+      Category 2    0.248           67.000
+    GHQ7_1
+      Category 1    0.370          100.000
+      Category 2    0.630          170.000
+    GHQ8_1
+      Category 1    0.356           96.000
+      Category 2    0.644          174.000
+    GHQ9_1
+      Category 1    0.815          220.000
+      Category 2    0.185           50.000
+    GHQ10_1
+      Category 1    0.844          228.000
+      Category 2    0.156           42.000
+    GHQ11_1
+      Category 1    0.885          239.000
+      Category 2    0.115           31.000
+    GHQ12_1
+      Category 1    0.430          116.000
+      Category 2    0.570          154.000
+
+
+SAMPLE STATISTICS
+
+
+     ESTIMATED SAMPLE STATISTICS
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              GHQ1_1$1      GHQ2_1$1      GHQ3_1$1      GHQ4_1$1      GHQ5_1$1
+              ________      ________      ________      ________      ________
+                0.168         0.882         0.046         0.244         0.868
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              GHQ6_1$1      GHQ7_1$1      GHQ8_1$1      GHQ9_1$1      GHQ10_1$
+              ________      ________      ________      ________      ________
+                0.680        -0.331        -0.370         0.896         1.013
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              GHQ11_1$      GHQ12_1$
+              ________      ________
+                1.201        -0.177
+
+
+           CORRELATION MATRIX (WITH VARIANCES ON THE DIAGONAL)
+              GHQ1_1        GHQ2_1        GHQ3_1        GHQ4_1        GHQ5_1
+              ________      ________      ________      ________      ________
+ GHQ1_1
+ GHQ2_1        -0.003
+ GHQ3_1         0.157        -0.088
+ GHQ4_1         0.281         0.187         0.386
+ GHQ5_1         0.185         0.566        -0.001        -0.035
+ GHQ6_1         0.058         0.524        -0.154        -0.001         0.678
+ GHQ7_1         0.158        -0.281         0.412         0.162        -0.266
+ GHQ8_1         0.292        -0.104         0.350         0.428         0.092
+ GHQ9_1         0.116         0.674        -0.142         0.100         0.636
+ GHQ10_1        0.262         0.643        -0.126         0.120         0.534
+ GHQ11_1       -0.070         0.503        -0.141         0.024         0.354
+ GHQ12_1        0.291         0.032         0.475         0.357        -0.125
+
+
+           CORRELATION MATRIX (WITH VARIANCES ON THE DIAGONAL)
+              GHQ6_1        GHQ7_1        GHQ8_1        GHQ9_1        GHQ10_1
+              ________      ________      ________      ________      ________
+ GHQ7_1        -0.216
+ GHQ8_1        -0.006         0.317
+ GHQ9_1         0.594        -0.363        -0.188
+ GHQ10_1        0.727        -0.291        -0.085         0.682
+ GHQ11_1        0.552        -0.076        -0.050         0.594         0.662
+ GHQ12_1       -0.154         0.454         0.475        -0.123        -0.230
+
+
+           CORRELATION MATRIX (WITH VARIANCES ON THE DIAGONAL)
+              GHQ11_1       GHQ12_1
+              ________      ________
+ GHQ12_1       -0.081
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                       25
+
+Chi-Square Test of Model Fit
+
+          Value                             80.801*
+          Degrees of Freedom                    53
+          P-Value                           0.0083
+
+*   The chi-square value for MLM, MLMV, MLR, ULSMV, WLSM and WLSMV cannot be used
+    for chi-square difference testing in the regular way.  MLM, MLR and WLSM
+    chi-square difference testing is described on the Mplus website.  MLMV, WLSMV,
+    and ULSMV difference testing is done using the DIFFTEST option.
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.044
+          90 Percent C.I.                    0.023  0.063
+          Probability RMSEA <= .05           0.679
+
+CFI/TLI
+
+          CFI                                0.959
+          TLI                                0.949
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                            747.915
+          Degrees of Freedom                    66
+          P-Value                           0.0000
+
+SRMR (Standardized Root Mean Square Residual)
+
+          Value                              0.093
+
+Optimum Function Value for Weighted Least-Squares Estimator
+
+          Value                     0.13043578D+00
+
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ GHQPOS_1 BY
+    GHQ1_1             1.000      0.000    999.000    999.000
+    GHQ3_1             1.956      0.612      3.196      0.001
+    GHQ4_1             1.507      0.491      3.071      0.002
+    GHQ7_1             1.860      0.581      3.199      0.001
+    GHQ8_1             1.911      0.587      3.257      0.001
+    GHQ12_1            2.295      0.670      3.427      0.001
+
+ GHQNEG_1 BY
+    GHQ2_1             1.000      0.000    999.000    999.000
+    GHQ5_1             0.987      0.116      8.490      0.000
+    GHQ6_1             1.091      0.124      8.784      0.000
+    GHQ9_1             1.117      0.124      8.987      0.000
+    GHQ10_1            1.154      0.123      9.409      0.000
+    GHQ11_1            0.928      0.134      6.942      0.000
+
+ GHQNEG_1 WITH
+    GHQPOS_1          -0.045      0.023     -1.945      0.052
+
+ Thresholds
+    GHQ1_1$1           0.168      0.077      2.190      0.029
+    GHQ2_1$1           0.882      0.088     10.011      0.000
+    GHQ3_1$1           0.046      0.076      0.609      0.543
+    GHQ4_1$1           0.244      0.077      3.162      0.002
+    GHQ5_1$1           0.868      0.088      9.901      0.000
+    GHQ6_1$1           0.680      0.083      8.192      0.000
+    GHQ7_1$1          -0.331      0.078     -4.252      0.000
+    GHQ8_1$1          -0.370      0.078     -4.736      0.000
+    GHQ9_1$1           0.896      0.089     10.121      0.000
+    GHQ10_1$1          1.013      0.092     10.968      0.000
+    GHQ11_1$1          1.201      0.100     12.005      0.000
+    GHQ12_1$1         -0.177      0.077     -2.311      0.021
+
+ Variances
+    GHQPOS_1           0.108      0.061      1.773      0.076
+    GHQNEG_1           0.553      0.097      5.725      0.000
+
+
+STANDARDIZED MODEL RESULTS
+
+
+STDYX Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ GHQPOS_1 BY
+    GHQ1_1             0.329      0.093      3.546      0.000
+    GHQ3_1             0.643      0.079      8.184      0.000
+    GHQ4_1             0.495      0.085      5.811      0.000
+    GHQ7_1             0.611      0.080      7.604      0.000
+    GHQ8_1             0.628      0.077      8.193      0.000
+    GHQ12_1            0.754      0.073     10.399      0.000
+
+ GHQNEG_1 BY
+    GHQ2_1             0.744      0.065     11.450      0.000
+    GHQ5_1             0.734      0.065     11.225      0.000
+    GHQ6_1             0.811      0.054     14.972      0.000
+    GHQ9_1             0.831      0.054     15.356      0.000
+    GHQ10_1            0.858      0.054     15.781      0.000
+    GHQ11_1            0.690      0.086      8.058      0.000
+
+ GHQNEG_1 WITH
+    GHQPOS_1          -0.182      0.089     -2.038      0.042
+
+ Thresholds
+    GHQ1_1$1           0.168      0.077      2.190      0.029
+    GHQ2_1$1           0.882      0.088     10.011      0.000
+    GHQ3_1$1           0.046      0.076      0.609      0.543
+    GHQ4_1$1           0.244      0.077      3.162      0.002
+    GHQ5_1$1           0.868      0.088      9.901      0.000
+    GHQ6_1$1           0.680      0.083      8.192      0.000
+    GHQ7_1$1          -0.331      0.078     -4.252      0.000
+    GHQ8_1$1          -0.370      0.078     -4.736      0.000
+    GHQ9_1$1           0.896      0.089     10.121      0.000
+    GHQ10_1$1          1.013      0.092     10.968      0.000
+    GHQ11_1$1          1.201      0.100     12.005      0.000
+    GHQ12_1$1         -0.177      0.077     -2.311      0.021
+
+ Variances
+    GHQPOS_1           1.000      0.000    999.000    999.000
+    GHQNEG_1           1.000      0.000    999.000    999.000
+
+
+R-SQUARE
+
+    Observed                                        Two-Tailed   Residual
+    Variable        Estimate       S.E.  Est./S.E.    P-Value    Variance
+
+    GHQ1_1             0.108      0.061      1.773      0.076      0.892
+    GHQ2_1             0.553      0.097      5.725      0.000      0.447
+    GHQ3_1             0.413      0.101      4.092      0.000      0.587
+    GHQ4_1             0.245      0.084      2.906      0.004      0.755
+    GHQ5_1             0.539      0.096      5.613      0.000      0.461
+    GHQ6_1             0.658      0.088      7.486      0.000      0.342
+    GHQ7_1             0.374      0.098      3.802      0.000      0.626
+    GHQ8_1             0.394      0.096      4.097      0.000      0.606
+    GHQ9_1             0.690      0.090      7.678      0.000      0.310
+    GHQ10_1            0.737      0.093      7.891      0.000      0.263
+    GHQ11_1            0.477      0.118      4.029      0.000      0.523
+    GHQ12_1            0.569      0.109      5.199      0.000      0.431
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.661E-04
+       (ratio of smallest to largest eigenvalue)
+
+
+MODEL MODIFICATION INDICES
+
+Minimum M.I. value for printing the modification index    10.000
+
+                                   M.I.     E.P.C.  Std E.P.C.  StdYX E.P.C.
+
+ON/BY Statements
+
+GHQ1_1   ON GHQNEG_1 /
+GHQNEG_1 BY GHQ1_1                11.585     0.293      0.218        0.218
+GHQ4_1   ON GHQNEG_1 /
+GHQNEG_1 BY GHQ4_1                10.353     0.291      0.216        0.216
+GHQ7_1   ON GHQNEG_1 /
+GHQNEG_1 BY GHQ7_1                19.885    -0.405     -0.301       -0.301
+
+ON Statements
+
+GHQPOS_1 ON GHQ1_1                11.596     0.380      1.157        1.157
+GHQPOS_1 ON GHQ4_1                10.435     0.379      1.152        1.152
+GHQPOS_1 ON GHQ7_1                19.846    -0.524     -1.594       -1.594
+GHQNEG_1 ON GHQ1_1                11.586     0.157      0.211        0.211
+GHQNEG_1 ON GHQ4_1                10.356     0.156      0.209        0.209
+GHQNEG_1 ON GHQ7_1                19.883    -0.216     -0.291       -0.291
+GHQ1_1   ON GHQ5_1                11.555     0.199      0.199        0.199
+GHQ1_1   ON GHQ10_1               13.786     0.196      0.196        0.196
+GHQ4_1   ON GHQ2_1                11.533     0.204      0.204        0.204
+GHQ7_1   ON GHQ2_1                15.977    -0.241     -0.241       -0.241
+GHQ7_1   ON GHQ5_1                15.366    -0.239     -0.239       -0.239
+GHQ7_1   ON GHQ6_1                13.211    -0.203     -0.203       -0.203
+GHQ7_1   ON GHQ9_1                19.151    -0.239     -0.239       -0.239
+GHQ7_1   ON GHQ10_1               16.105    -0.223     -0.223       -0.223
+GHQ7_1   ON GHQ11_1               10.115    -0.222     -0.222       -0.222
+
+WITH Statements
+
+GHQ1_1   WITH GHQPOS_1            11.594     0.380      1.157        1.225
+GHQ1_1   WITH GHQNEG_1            11.586     0.157      0.211        0.223
+GHQ4_1   WITH GHQPOS_1            10.433     0.379      1.152        1.326
+GHQ4_1   WITH GHQNEG_1            10.356     0.156      0.209        0.241
+GHQ7_1   WITH GHQPOS_1            19.849    -0.524     -1.594       -2.015
+GHQ7_1   WITH GHQNEG_1            19.883    -0.216     -0.291       -0.368
+
+
+     Beginning Time:  14:26:59
+        Ending Time:  14:26:59
+       Elapsed Time:  00:00:00
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2019 Muthen & Muthen

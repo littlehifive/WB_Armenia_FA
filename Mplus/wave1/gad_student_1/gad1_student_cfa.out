@@ -1,0 +1,430 @@
+Mplus VERSION 8.4 (Mac)
+MUTHEN & MUTHEN
+12/14/2024  11:09 AM
+
+INPUT INSTRUCTIONS
+
+  Title: Student Grit Baseline CFA;
+
+  Data:
+     File is ../dat_stu_1.txt;
+
+  Variable:
+     Names are studentid age gender grade country
+     dass1_1 dass2_1 dass3_1 dass4_1 dass5_1 dass6_1 dass7_1
+     dass8_1 dass9_1 dass10_1 dass11_1 dass12_1 dass13_1 dass14_1
+     dass15_1 dass16_1 dass17_1 dass18_1 dass19_1 dass20_1 dass21_1
+     phq1_1 phq2_1 phq3_1 phq4_1 phq5_1 phq6_1 phq7_1 phq8_1
+     gad1_1 gad2_1 gad3_1 gad4_1 gad5_1 gad6_1 gad7_1
+     ghq1_1 ghq2_1 ghq3_1 ghq4_1 ghq5_1 ghq6_1 ghq7_1 ghq8_1
+     ghq9_1 ghq10_1 ghq11_1 ghq12_1
+     erica1_1 erica2_1 erica3_1 erica4_1 erica5_1 erica6_1 erica7_1
+     erica8_1 erica9_1 erica10_1 erica11_1 erica12_1 erica13_1
+     erica14_1 erica15_1 erica16_1 erica17_1
+     sswq1_1 sswq2_1 sswq3_1 sswq4_1 sswq5_1 sswq6_1 sswq7_1
+     sswq8_1 sswq9_1 sswq10_1 sswq11_1 sswq12_1 sswq13_1 sswq14_1
+     sswq15_1 sswq16_1 atti1_1 atti2_1 atti3_1 atti4_1 atti5_1 atti6_1
+     half;
+     Missing are . ;
+
+    Usevariable are
+  	gad1_1 gad2_1 gad3_1 gad4_1 gad5_1 gad6_1 gad7_1;
+
+    Categorical is
+  	gad1_1 gad2_1 gad3_1 gad4_1 gad5_1 gad6_1 gad7_1;
+
+    Idvariable is studentid;
+
+  Analysis:
+     Estimator = wlsmv;
+
+  Model:
+    gad_1 by
+      gad1_1 gad2_1 gad3_1 gad4_1 gad5_1 gad6_1 gad7_1;
+
+  Output: sampstat stdyx modindices(all);
+
+
+
+*** WARNING
+  Data set contains cases with missing on all variables.
+  These cases were not included in the analysis.
+  Number of cases with missing on all variables:  1
+   1 WARNING(S) FOUND IN THE INPUT INSTRUCTIONS
+
+
+
+Student Grit Baseline CFA;
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                         539
+
+Number of dependent variables                                    7
+Number of independent variables                                  0
+Number of continuous latent variables                            1
+
+Observed dependent variables
+
+  Binary and ordered categorical (ordinal)
+   GAD1_1      GAD2_1      GAD3_1      GAD4_1      GAD5_1      GAD6_1
+   GAD7_1
+
+Continuous latent variables
+   GAD_1
+
+Variables with special functions
+
+  ID variable           STUDENTI
+
+Estimator                                                    WLSMV
+Maximum number of iterations                                  1000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+Maximum number of iterations for H1                           2000
+Convergence criterion for H1                             0.100D-03
+Parameterization                                             DELTA
+Link                                                        PROBIT
+
+Input data file(s)
+  ../dat_stu_1.txt
+
+Input data format  FREE
+
+
+SUMMARY OF DATA
+
+     Number of missing data patterns             1
+
+
+COVARIANCE COVERAGE OF DATA
+
+Minimum covariance coverage value   0.100
+
+
+     PROPORTION OF DATA PRESENT
+
+
+           Covariance Coverage
+              GAD1_1        GAD2_1        GAD3_1        GAD4_1        GAD5_1
+              ________      ________      ________      ________      ________
+ GAD1_1         1.000
+ GAD2_1         1.000         1.000
+ GAD3_1         1.000         1.000         1.000
+ GAD4_1         1.000         1.000         1.000         1.000
+ GAD5_1         1.000         1.000         1.000         1.000         1.000
+ GAD6_1         1.000         1.000         1.000         1.000         1.000
+ GAD7_1         1.000         1.000         1.000         1.000         1.000
+
+
+           Covariance Coverage
+              GAD6_1        GAD7_1
+              ________      ________
+ GAD6_1         1.000
+ GAD7_1         1.000         1.000
+
+
+UNIVARIATE PROPORTIONS AND COUNTS FOR CATEGORICAL VARIABLES
+
+    GAD1_1
+      Category 1    0.494          266.000
+      Category 2    0.365          197.000
+      Category 3    0.067           36.000
+      Category 4    0.058           31.000
+      Category 5    0.017            9.000
+    GAD2_1
+      Category 1    0.607          327.000
+      Category 2    0.276          149.000
+      Category 3    0.063           34.000
+      Category 4    0.039           21.000
+      Category 5    0.015            8.000
+    GAD3_1
+      Category 1    0.362          195.000
+      Category 2    0.378          204.000
+      Category 3    0.089           48.000
+      Category 4    0.111           60.000
+      Category 5    0.059           32.000
+    GAD4_1
+      Category 1    0.521          281.000
+      Category 2    0.304          164.000
+      Category 3    0.067           36.000
+      Category 4    0.074           40.000
+      Category 5    0.033           18.000
+    GAD5_1
+      Category 1    0.573          309.000
+      Category 2    0.310          167.000
+      Category 3    0.041           22.000
+      Category 4    0.056           30.000
+      Category 5    0.020           11.000
+    GAD6_1
+      Category 1    0.486          262.000
+      Category 2    0.291          157.000
+      Category 3    0.076           41.000
+      Category 4    0.100           54.000
+      Category 5    0.046           25.000
+    GAD7_1
+      Category 1    0.505          272.000
+      Category 2    0.314          169.000
+      Category 3    0.056           30.000
+      Category 4    0.085           46.000
+      Category 5    0.041           22.000
+
+
+SAMPLE STATISTICS
+
+
+     ESTIMATED SAMPLE STATISTICS
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              GAD1_1$1      GAD1_1$2      GAD1_1$3      GAD1_1$4      GAD2_1$1
+              ________      ________      ________      ________      ________
+               -0.016         1.076         1.445         2.127         0.271
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              GAD2_1$2      GAD2_1$3      GAD2_1$4      GAD3_1$1      GAD3_1$2
+              ________      ________      ________      ________      ________
+                1.191         1.609         2.174        -0.354         0.644
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              GAD3_1$3      GAD3_1$4      GAD4_1$1      GAD4_1$2      GAD4_1$3
+              ________      ________      ________      ________      ________
+                0.951         1.560         0.054         0.937         1.239
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              GAD4_1$4      GAD5_1$1      GAD5_1$2      GAD5_1$3      GAD5_1$4
+              ________      ________      ________      ________      ________
+                1.833         0.185         1.191         1.432         2.045
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              GAD6_1$1      GAD6_1$2      GAD6_1$3      GAD6_1$4      GAD7_1$1
+              ________      ________      ________      ________      ________
+               -0.035         0.763         1.051         1.681         0.012
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              GAD7_1$2      GAD7_1$3      GAD7_1$4
+              ________      ________      ________
+                0.908         1.145         1.741
+
+
+           CORRELATION MATRIX (WITH VARIANCES ON THE DIAGONAL)
+              GAD1_1        GAD2_1        GAD3_1        GAD4_1        GAD5_1
+              ________      ________      ________      ________      ________
+ GAD1_1
+ GAD2_1         0.558
+ GAD3_1         0.447         0.521
+ GAD4_1         0.395         0.520         0.434
+ GAD5_1         0.529         0.610         0.605         0.559
+ GAD6_1         0.605         0.526         0.455         0.483         0.489
+ GAD7_1         0.474         0.614         0.599         0.436         0.638
+
+
+           CORRELATION MATRIX (WITH VARIANCES ON THE DIAGONAL)
+              GAD6_1        GAD7_1
+              ________      ________
+ GAD7_1         0.482
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                       35
+
+Chi-Square Test of Model Fit
+
+          Value                             60.609*
+          Degrees of Freedom                    14
+          P-Value                           0.0000
+
+*   The chi-square value for MLM, MLMV, MLR, ULSMV, WLSM and WLSMV cannot be used
+    for chi-square difference testing in the regular way.  MLM, MLR and WLSM
+    chi-square difference testing is described on the Mplus website.  MLMV, WLSMV,
+    and ULSMV difference testing is done using the DIFFTEST option.
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.079
+          90 Percent C.I.                    0.059  0.099
+          Probability RMSEA <= .05           0.010
+
+CFI/TLI
+
+          CFI                                0.981
+          TLI                                0.972
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                           2509.584
+          Degrees of Freedom                    21
+          P-Value                           0.0000
+
+SRMR (Standardized Root Mean Square Residual)
+
+          Value                              0.029
+
+Optimum Function Value for Weighted Least-Squares Estimator
+
+          Value                     0.30971558D-01
+
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ GAD_1    BY
+    GAD1_1             1.000      0.000    999.000    999.000
+    GAD2_1             1.111      0.056     19.909      0.000
+    GAD3_1             1.018      0.054     18.872      0.000
+    GAD4_1             0.918      0.063     14.632      0.000
+    GAD5_1             1.155      0.055     21.014      0.000
+    GAD6_1             1.002      0.056     17.910      0.000
+    GAD7_1             1.091      0.055     19.798      0.000
+
+ Thresholds
+    GAD1_1$1          -0.016      0.054     -0.302      0.763
+    GAD1_1$2           1.076      0.067     16.051      0.000
+    GAD1_1$3           1.445      0.080     17.973      0.000
+    GAD1_1$4           2.127      0.133     16.002      0.000
+    GAD2_1$1           0.271      0.055      4.948      0.000
+    GAD2_1$2           1.191      0.070     16.895      0.000
+    GAD2_1$3           1.609      0.089     18.100      0.000
+    GAD2_1$4           2.174      0.139     15.666      0.000
+    GAD3_1$1          -0.354      0.055     -6.404      0.000
+    GAD3_1$2           0.644      0.058     11.057      0.000
+    GAD3_1$3           0.951      0.064     14.896      0.000
+    GAD3_1$4           1.560      0.086     18.107      0.000
+    GAD4_1$1           0.054      0.054      0.991      0.322
+    GAD4_1$2           0.937      0.064     14.745      0.000
+    GAD4_1$3           1.239      0.072     17.186      0.000
+    GAD4_1$4           1.833      0.104     17.610      0.000
+    GAD5_1$1           0.185      0.054      3.401      0.001
+    GAD5_1$2           1.191      0.070     16.895      0.000
+    GAD5_1$3           1.432      0.080     17.944      0.000
+    GAD5_1$4           2.045      0.124     16.542      0.000
+    GAD6_1$1          -0.035      0.054     -0.646      0.518
+    GAD6_1$2           0.763      0.060     12.699      0.000
+    GAD6_1$3           1.051      0.066     15.843      0.000
+    GAD6_1$4           1.681      0.093     18.022      0.000
+    GAD7_1$1           0.012      0.054      0.215      0.829
+    GAD7_1$2           0.908      0.063     14.440      0.000
+    GAD7_1$3           1.145      0.069     16.584      0.000
+    GAD7_1$4           1.741      0.097     17.898      0.000
+
+ Variances
+    GAD_1              0.488      0.042     11.724      0.000
+
+
+STANDARDIZED MODEL RESULTS
+
+
+STDYX Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ GAD_1    BY
+    GAD1_1             0.698      0.030     23.448      0.000
+    GAD2_1             0.776      0.028     27.906      0.000
+    GAD3_1             0.711      0.028     24.958      0.000
+    GAD4_1             0.641      0.034     18.810      0.000
+    GAD5_1             0.807      0.025     32.808      0.000
+    GAD6_1             0.699      0.029     24.536      0.000
+    GAD7_1             0.762      0.026     29.138      0.000
+
+ Thresholds
+    GAD1_1$1          -0.016      0.054     -0.302      0.763
+    GAD1_1$2           1.076      0.067     16.051      0.000
+    GAD1_1$3           1.445      0.080     17.973      0.000
+    GAD1_1$4           2.127      0.133     16.002      0.000
+    GAD2_1$1           0.271      0.055      4.948      0.000
+    GAD2_1$2           1.191      0.070     16.895      0.000
+    GAD2_1$3           1.609      0.089     18.100      0.000
+    GAD2_1$4           2.174      0.139     15.666      0.000
+    GAD3_1$1          -0.354      0.055     -6.404      0.000
+    GAD3_1$2           0.644      0.058     11.057      0.000
+    GAD3_1$3           0.951      0.064     14.896      0.000
+    GAD3_1$4           1.560      0.086     18.107      0.000
+    GAD4_1$1           0.054      0.054      0.991      0.322
+    GAD4_1$2           0.937      0.064     14.745      0.000
+    GAD4_1$3           1.239      0.072     17.186      0.000
+    GAD4_1$4           1.833      0.104     17.610      0.000
+    GAD5_1$1           0.185      0.054      3.401      0.001
+    GAD5_1$2           1.191      0.070     16.895      0.000
+    GAD5_1$3           1.432      0.080     17.944      0.000
+    GAD5_1$4           2.045      0.124     16.542      0.000
+    GAD6_1$1          -0.035      0.054     -0.646      0.518
+    GAD6_1$2           0.763      0.060     12.699      0.000
+    GAD6_1$3           1.051      0.066     15.843      0.000
+    GAD6_1$4           1.681      0.093     18.022      0.000
+    GAD7_1$1           0.012      0.054      0.215      0.829
+    GAD7_1$2           0.908      0.063     14.440      0.000
+    GAD7_1$3           1.145      0.069     16.584      0.000
+    GAD7_1$4           1.741      0.097     17.898      0.000
+
+ Variances
+    GAD_1              1.000      0.000    999.000    999.000
+
+
+R-SQUARE
+
+    Observed                                        Two-Tailed   Residual
+    Variable        Estimate       S.E.  Est./S.E.    P-Value    Variance
+
+    GAD1_1             0.488      0.042     11.724      0.000      0.512
+    GAD2_1             0.602      0.043     13.953      0.000      0.398
+    GAD3_1             0.506      0.041     12.479      0.000      0.494
+    GAD4_1             0.411      0.044      9.405      0.000      0.589
+    GAD5_1             0.651      0.040     16.404      0.000      0.349
+    GAD6_1             0.489      0.040     12.268      0.000      0.511
+    GAD7_1             0.580      0.040     14.569      0.000      0.420
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.329E-02
+       (ratio of smallest to largest eigenvalue)
+
+
+MODEL MODIFICATION INDICES
+
+Minimum M.I. value for printing the modification index    10.000
+
+                                   M.I.     E.P.C.  Std E.P.C.  StdYX E.P.C.
+
+ON Statements
+
+GAD1_1   ON GAD6_1                34.939     0.190      0.190        0.190
+GAD6_1   ON GAD1_1                34.939     0.190      0.190        0.190
+
+WITH Statements
+
+GAD6_1   WITH GAD1_1              34.937     0.190      0.190        0.372
+
+
+     Beginning Time:  11:09:24
+        Ending Time:  11:09:24
+       Elapsed Time:  00:00:00
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2019 Muthen & Muthen

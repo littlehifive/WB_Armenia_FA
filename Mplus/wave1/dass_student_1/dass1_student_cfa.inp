@@ -1,0 +1,44 @@
+Title: Student DASS Endline CFA;
+
+Data:
+   File is ../dat_stu_1.txt;
+
+Variable:
+   Names are studentid age gender grade country 
+   dass1_1 dass2_1 dass3_1 dass4_1 dass5_1 dass6_1 dass7_1 
+   dass8_1 dass9_1 dass10_1 dass11_1 dass12_1 dass13_1 dass14_1 
+   dass15_1 dass16_1 dass17_1 dass18_1 dass19_1 dass20_1 dass21_1 
+   phq1_1 phq2_1 phq3_1 phq4_1 phq5_1 phq6_1 phq7_1 phq8_1 
+   gad1_1 gad2_1 gad3_1 gad4_1 gad5_1 gad6_1 gad7_1 
+   ghq1_1 ghq2_1 ghq3_1 ghq4_1 ghq5_1 ghq6_1 ghq7_1 ghq8_1 
+   ghq9_1 ghq10_1 ghq11_1 ghq12_1 
+   erica1_1 erica2_1 erica3_1 erica4_1 erica5_1 erica6_1 erica7_1 
+   erica8_1 erica9_1 erica10_1 erica11_1 erica12_1 erica13_1 
+   erica14_1 erica15_1 erica16_1 erica17_1 
+   sswq1_1 sswq2_1 sswq3_1 sswq4_1 sswq5_1 sswq6_1 sswq7_1 
+   sswq8_1 sswq9_1 sswq10_1 sswq11_1 sswq12_1 sswq13_1 sswq14_1 
+   sswq15_1 sswq16_1 atti1_1 atti2_1 atti3_1 atti4_1 atti5_1 atti6_1
+   half;
+   Missing are . ;
+
+  Usevariable are
+	dass1_1 dass2_1 dass3_1 dass4_1 dass5_1 dass6_1 dass7_1 dass8_1 
+  dass9_1 dass10_1 dass11_1 dass12_1 dass13_1 dass14_1 
+  dass15_1 dass16_1 dass17_1 dass18_1 dass19_1 dass20_1 dass21_1;
+   
+  Categorical is
+	dass1_1 dass2_1 dass3_1 dass4_1 dass5_1 dass6_1 dass7_1 dass8_1 
+  dass9_1 dass10_1 dass11_1 dass12_1 dass13_1 dass14_1 
+  dass15_1 dass16_1 dass17_1 dass18_1 dass19_1 dass20_1 dass21_1;
+  
+  Idvariable is studentid;  
+  
+Analysis:
+   Estimator = wlsmv;
+   
+Model:
+  stress_1 by dass1_1 dass6_1 dass8_1 dass11_1 dass12_1 dass14_1 dass18_1;
+  anxiety_1 by dass2_1 dass4_1 dass7_1 dass9_1 dass15_1 dass19_1 dass20_1;
+  depress_1 by dass3_1 dass5_1 dass10_1 dass13_1 dass16_1 dass17_1 dass21_1;
+
+Output: sampstat stdyx modindices(all);

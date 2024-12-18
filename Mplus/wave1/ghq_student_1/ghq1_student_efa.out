@@ -1,0 +1,1103 @@
+Mplus VERSION 8.4 (Mac)
+MUTHEN & MUTHEN
+12/14/2024  11:30 AM
+
+INPUT INSTRUCTIONS
+
+  Title: Student GHQ Baseline EFA;
+
+  Data:
+     File is ../dat_stu_1.txt;
+
+  Variable:
+     Names are studentid age gender grade country
+     dass1_1 dass2_1 dass3_1 dass4_1 dass5_1 dass6_1 dass7_1
+     dass8_1 dass9_1 dass10_1 dass11_1 dass12_1 dass13_1 dass14_1
+     dass15_1 dass16_1 dass17_1 dass18_1 dass19_1 dass20_1 dass21_1
+     phq1_1 phq2_1 phq3_1 phq4_1 phq5_1 phq6_1 phq7_1 phq8_1
+     gad1_1 gad2_1 gad3_1 gad4_1 gad5_1 gad6_1 gad7_1
+     ghq1_1 ghq2_1 ghq3_1 ghq4_1 ghq5_1 ghq6_1 ghq7_1 ghq8_1
+     ghq9_1 ghq10_1 ghq11_1 ghq12_1
+     erica1_1 erica2_1 erica3_1 erica4_1 erica5_1 erica6_1 erica7_1
+     erica8_1 erica9_1 erica10_1 erica11_1 erica12_1 erica13_1
+     erica14_1 erica15_1 erica16_1 erica17_1
+     sswq1_1 sswq2_1 sswq3_1 sswq4_1 sswq5_1 sswq6_1 sswq7_1
+     sswq8_1 sswq9_1 sswq10_1 sswq11_1 sswq12_1 sswq13_1 sswq14_1
+     sswq15_1 sswq16_1 atti1_1 atti2_1 atti3_1 atti4_1 atti5_1 atti6_1
+     half;
+     Missing are . ;
+
+    Usevariable are
+  	ghq1_1 ghq2_1 ghq3_1 ghq4_1 ghq5_1 ghq6_1 ghq7_1 ghq8_1
+  	ghq9_1 ghq10_1 ghq11_1 ghq12_1;
+
+    Categorical is
+  	ghq1_1 ghq2_1 ghq3_1 ghq4_1 ghq5_1 ghq6_1 ghq7_1 ghq8_1
+  	ghq9_1 ghq10_1 ghq11_1 ghq12_1;
+
+    Idvariable is studentid;
+
+    Useobservations is half eq 1;
+
+  Analysis:
+     Type = efa 1 3;
+     Estimator = wlsmv;
+
+  Output: sampstat stdy modindices(all);
+
+
+
+*** WARNING in OUTPUT command
+  STANDARDIZED (STD, STDY, STDYX) options are not available for TYPE=EFA.
+  Request for STANDARDIZED options will be ignored.  Note that STANDARDIZED options
+  are available with the use of EFA factors (ESEM) declared in the MODEL command.
+*** WARNING
+  Data set contains cases with missing on all variables.
+  These cases were not included in the analysis.
+  Number of cases with missing on all variables:  1
+   2 WARNING(S) FOUND IN THE INPUT INSTRUCTIONS
+
+
+
+Student GHQ Baseline EFA;
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                         269
+
+Number of dependent variables                                   12
+Number of independent variables                                  0
+Number of continuous latent variables                            0
+
+Observed dependent variables
+
+  Binary and ordered categorical (ordinal)
+   GHQ1_1      GHQ2_1      GHQ3_1      GHQ4_1      GHQ5_1      GHQ6_1
+   GHQ7_1      GHQ8_1      GHQ9_1      GHQ10_1     GHQ11_1     GHQ12_1
+
+Variables with special functions
+
+  ID variable           STUDENTI
+
+Estimator                                                    WLSMV
+Rotation                                                    GEOMIN
+Row standardization                                    CORRELATION
+Type of rotation                                           OBLIQUE
+Epsilon value                                               Varies
+Maximum number of iterations                                  1000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+Maximum number of iterations for H1                           2000
+Convergence criterion for H1                             0.100D-03
+Optimization Specifications for the Exploratory Factor Analysis
+Rotation Algorithm
+  Number of random starts                                       30
+  Maximum number of iterations                               10000
+  Derivative convergence criterion                       0.100D-04
+Link                                                        PROBIT
+
+Input data file(s)
+  ../dat_stu_1.txt
+
+Input data format  FREE
+
+
+SUMMARY OF DATA
+
+     Number of missing data patterns             1
+
+
+COVARIANCE COVERAGE OF DATA
+
+Minimum covariance coverage value   0.100
+
+
+     PROPORTION OF DATA PRESENT
+
+
+           Covariance Coverage
+              GHQ1_1        GHQ2_1        GHQ3_1        GHQ4_1        GHQ5_1
+              ________      ________      ________      ________      ________
+ GHQ1_1         1.000
+ GHQ2_1         1.000         1.000
+ GHQ3_1         1.000         1.000         1.000
+ GHQ4_1         1.000         1.000         1.000         1.000
+ GHQ5_1         1.000         1.000         1.000         1.000         1.000
+ GHQ6_1         1.000         1.000         1.000         1.000         1.000
+ GHQ7_1         1.000         1.000         1.000         1.000         1.000
+ GHQ8_1         1.000         1.000         1.000         1.000         1.000
+ GHQ9_1         1.000         1.000         1.000         1.000         1.000
+ GHQ10_1        1.000         1.000         1.000         1.000         1.000
+ GHQ11_1        1.000         1.000         1.000         1.000         1.000
+ GHQ12_1        1.000         1.000         1.000         1.000         1.000
+
+
+           Covariance Coverage
+              GHQ6_1        GHQ7_1        GHQ8_1        GHQ9_1        GHQ10_1
+              ________      ________      ________      ________      ________
+ GHQ6_1         1.000
+ GHQ7_1         1.000         1.000
+ GHQ8_1         1.000         1.000         1.000
+ GHQ9_1         1.000         1.000         1.000         1.000
+ GHQ10_1        1.000         1.000         1.000         1.000         1.000
+ GHQ11_1        1.000         1.000         1.000         1.000         1.000
+ GHQ12_1        1.000         1.000         1.000         1.000         1.000
+
+
+           Covariance Coverage
+              GHQ11_1       GHQ12_1
+              ________      ________
+ GHQ11_1        1.000
+ GHQ12_1        1.000         1.000
+
+
+UNIVARIATE PROPORTIONS AND COUNTS FOR CATEGORICAL VARIABLES
+
+    GHQ1_1
+      Category 1    0.517          139.000
+      Category 2    0.483          130.000
+    GHQ2_1
+      Category 1    0.848          228.000
+      Category 2    0.152           41.000
+    GHQ3_1
+      Category 1    0.476          128.000
+      Category 2    0.524          141.000
+    GHQ4_1
+      Category 1    0.561          151.000
+      Category 2    0.439          118.000
+    GHQ5_1
+      Category 1    0.840          226.000
+      Category 2    0.160           43.000
+    GHQ6_1
+      Category 1    0.777          209.000
+      Category 2    0.223           60.000
+    GHQ7_1
+      Category 1    0.335           90.000
+      Category 2    0.665          179.000
+    GHQ8_1
+      Category 1    0.346           93.000
+      Category 2    0.654          176.000
+    GHQ9_1
+      Category 1    0.836          225.000
+      Category 2    0.164           44.000
+    GHQ10_1
+      Category 1    0.851          229.000
+      Category 2    0.149           40.000
+    GHQ11_1
+      Category 1    0.874          235.000
+      Category 2    0.126           34.000
+    GHQ12_1
+      Category 1    0.387          104.000
+      Category 2    0.613          165.000
+
+
+SAMPLE STATISTICS
+
+
+     ESTIMATED SAMPLE STATISTICS
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              GHQ1_1$1      GHQ2_1$1      GHQ3_1$1      GHQ4_1$1      GHQ5_1$1
+              ________      ________      ________      ________      ________
+                0.042         1.026        -0.061         0.154         0.995
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              GHQ6_1$1      GHQ7_1$1      GHQ8_1$1      GHQ9_1$1      GHQ10_1$
+              ________      ________      ________      ________      ________
+                0.762        -0.427        -0.397         0.980         1.042
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              GHQ11_1$      GHQ12_1$
+              ________      ________
+                1.144        -0.288
+
+
+           CORRELATION MATRIX (WITH VARIANCES ON THE DIAGONAL)
+              GHQ1_1        GHQ2_1        GHQ3_1        GHQ4_1        GHQ5_1
+              ________      ________      ________      ________      ________
+ GHQ1_1
+ GHQ2_1         0.204
+ GHQ3_1         0.274        -0.059
+ GHQ4_1         0.347         0.120         0.439
+ GHQ5_1         0.275         0.632        -0.135         0.234
+ GHQ6_1         0.217         0.512        -0.014         0.084         0.617
+ GHQ7_1         0.191        -0.178         0.426         0.271        -0.147
+ GHQ8_1         0.175         0.140         0.411         0.449        -0.047
+ GHQ9_1         0.216         0.622        -0.002         0.177         0.752
+ GHQ10_1        0.267         0.431         0.042         0.296         0.534
+ GHQ11_1       -0.019         0.309        -0.037         0.227         0.486
+ GHQ12_1        0.224        -0.006         0.542         0.261        -0.055
+
+
+           CORRELATION MATRIX (WITH VARIANCES ON THE DIAGONAL)
+              GHQ6_1        GHQ7_1        GHQ8_1        GHQ9_1        GHQ10_1
+              ________      ________      ________      ________      ________
+ GHQ7_1        -0.131
+ GHQ8_1        -0.009         0.341
+ GHQ9_1         0.815        -0.171        -0.072
+ GHQ10_1        0.627        -0.235         0.081         0.756
+ GHQ11_1        0.380        -0.216        -0.060         0.600         0.471
+ GHQ12_1        0.006         0.435         0.426        -0.116        -0.145
+
+
+           CORRELATION MATRIX (WITH VARIANCES ON THE DIAGONAL)
+              GHQ11_1       GHQ12_1
+              ________      ________
+ GHQ12_1       -0.176
+
+
+SUMMARY OF MODEL FIT INFORMATION
+
+
+                   Number of                   Degrees of
+     Model        Parameters      Chi-Square    Freedom     P-Value
+
+     1-factor          12            329.452        54       0.0000
+     2-factor          23             38.808        43       0.6536
+     3-factor          33             24.246        33       0.8658
+
+                                               Degrees of
+     Models Compared              Chi-Square    Freedom     P-Value
+
+     1-factor against 2-factor       177.180        11       0.0000
+     2-factor against 3-factor        13.086        10       0.2189
+
+
+
+RESULTS FOR EXPLORATORY FACTOR ANALYSIS
+
+
+           EIGENVALUES FOR SAMPLE CORRELATION MATRIX
+                  1             2             3             4             5
+              ________      ________      ________      ________      ________
+                4.111         2.787         0.952         0.823         0.758
+
+
+           EIGENVALUES FOR SAMPLE CORRELATION MATRIX
+                  6             7             8             9            10
+              ________      ________      ________      ________      ________
+                0.641         0.552         0.415         0.390         0.257
+
+
+           EIGENVALUES FOR SAMPLE CORRELATION MATRIX
+                 11            12
+              ________      ________
+                0.227         0.087
+
+
+EXPLORATORY FACTOR ANALYSIS WITH 1 FACTOR(S):
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                       12
+
+Chi-Square Test of Model Fit
+
+          Value                            329.452*
+          Degrees of Freedom                    54
+          P-Value                           0.0000
+
+*   The chi-square value for MLM, MLMV, MLR, ULSMV, WLSM and WLSMV cannot be used
+    for chi-square difference testing in the regular way.  MLM, MLR and WLSM
+    chi-square difference testing is described on the Mplus website.  MLMV, WLSMV,
+    and ULSMV difference testing is done using the DIFFTEST option.
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.138
+          90 Percent C.I.                    0.124  0.152
+          Probability RMSEA <= .05           0.000
+
+CFI/TLI
+
+          CFI                                0.611
+          TLI                                0.525
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                            774.286
+          Degrees of Freedom                    66
+          P-Value                           0.0000
+
+SRMR (Standardized Root Mean Square Residual)
+
+          Value                              0.184
+
+
+
+MINIMUM ROTATION FUNCTION VALUE       3.76461
+
+
+
+           GEOMIN ROTATED LOADINGS (* significant at 5% level)
+                  1
+              ________
+ GHQ1_1         0.273*
+ GHQ2_1         0.660*
+ GHQ3_1        -0.008
+ GHQ4_1         0.246*
+ GHQ5_1         0.791*
+ GHQ6_1         0.802*
+ GHQ7_1        -0.179
+ GHQ8_1         0.030
+ GHQ9_1         0.985*
+ GHQ10_1        0.764*
+ GHQ11_1        0.575*
+ GHQ12_1       -0.075
+
+
+           GEOMIN FACTOR CORRELATIONS (* significant at 5% level)
+                  1
+              ________
+      1         1.000
+
+
+           ESTIMATED RESIDUAL VARIANCES
+              GHQ1_1        GHQ2_1        GHQ3_1        GHQ4_1        GHQ5_1
+              ________      ________      ________      ________      ________
+                0.925         0.564         1.000         0.939         0.374
+
+
+           ESTIMATED RESIDUAL VARIANCES
+              GHQ6_1        GHQ7_1        GHQ8_1        GHQ9_1        GHQ10_1
+              ________      ________      ________      ________      ________
+                0.357         0.968         0.999         0.030         0.416
+
+
+           ESTIMATED RESIDUAL VARIANCES
+              GHQ11_1       GHQ12_1
+              ________      ________
+                0.669         0.994
+
+
+           S.E. GEOMIN ROTATED LOADINGS
+                  1
+              ________
+ GHQ1_1         0.096
+ GHQ2_1         0.079
+ GHQ3_1         0.098
+ GHQ4_1         0.095
+ GHQ5_1         0.064
+ GHQ6_1         0.057
+ GHQ7_1         0.101
+ GHQ8_1         0.100
+ GHQ9_1         0.038
+ GHQ10_1        0.066
+ GHQ11_1        0.099
+ GHQ12_1        0.100
+
+
+           S.E. GEOMIN FACTOR CORRELATIONS
+                  1
+              ________
+      1         0.000
+
+
+           S.E. ESTIMATED RESIDUAL VARIANCES
+              GHQ1_1        GHQ2_1        GHQ3_1        GHQ4_1        GHQ5_1
+              ________      ________      ________      ________      ________
+                0.052         0.104         0.002         0.047         0.101
+
+
+           S.E. ESTIMATED RESIDUAL VARIANCES
+              GHQ6_1        GHQ7_1        GHQ8_1        GHQ9_1        GHQ10_1
+              ________      ________      ________      ________      ________
+                0.091         0.036         0.006         0.076         0.100
+
+
+           S.E. ESTIMATED RESIDUAL VARIANCES
+              GHQ11_1       GHQ12_1
+              ________      ________
+                0.114         0.015
+
+
+           Est./S.E. GEOMIN ROTATED LOADINGS
+                  1
+              ________
+ GHQ1_1         2.854
+ GHQ2_1         8.360
+ GHQ3_1        -0.079
+ GHQ4_1         2.594
+ GHQ5_1        12.455
+ GHQ6_1        14.114
+ GHQ7_1        -1.769
+ GHQ8_1         0.300
+ GHQ9_1        25.627
+ GHQ10_1       11.656
+ GHQ11_1        5.804
+ GHQ12_1       -0.751
+
+
+           Est./S.E. GEOMIN FACTOR CORRELATIONS
+                  1
+              ________
+      1         0.000
+
+
+           Est./S.E. ESTIMATED RESIDUAL VARIANCES
+              GHQ1_1        GHQ2_1        GHQ3_1        GHQ4_1        GHQ5_1
+              ________      ________      ________      ________      ________
+               17.697         5.418       660.913        20.093         3.717
+
+
+           Est./S.E. ESTIMATED RESIDUAL VARIANCES
+              GHQ6_1        GHQ7_1        GHQ8_1        GHQ9_1        GHQ10_1
+              ________      ________      ________      ________      ________
+                3.913        26.643       168.364         0.394         4.159
+
+
+           Est./S.E. ESTIMATED RESIDUAL VARIANCES
+              GHQ11_1       GHQ12_1
+              ________      ________
+                5.875        65.549
+
+
+EXPLORATORY FACTOR ANALYSIS WITH 2 FACTOR(S):
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                       23
+
+Chi-Square Test of Model Fit
+
+          Value                             38.808*
+          Degrees of Freedom                    43
+          P-Value                           0.6536
+
+*   The chi-square value for MLM, MLMV, MLR, ULSMV, WLSM and WLSMV cannot be used
+    for chi-square difference testing in the regular way.  MLM, MLR and WLSM
+    chi-square difference testing is described on the Mplus website.  MLMV, WLSMV,
+    and ULSMV difference testing is done using the DIFFTEST option.
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.000
+          90 Percent C.I.                    0.000  0.035
+          Probability RMSEA <= .05           0.997
+
+CFI/TLI
+
+          CFI                                1.000
+          TLI                                1.000
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                            774.286
+          Degrees of Freedom                    66
+          P-Value                           0.0000
+
+SRMR (Standardized Root Mean Square Residual)
+
+          Value                              0.059
+
+
+
+MINIMUM ROTATION FUNCTION VALUE       0.63893
+
+
+
+           GEOMIN ROTATED LOADINGS (* significant at 5% level)
+                  1             2
+              ________      ________
+ GHQ1_1         0.289*        0.394*
+ GHQ2_1         0.660*        0.029
+ GHQ3_1        -0.002         0.744*
+ GHQ4_1         0.282*        0.594*
+ GHQ5_1         0.790*       -0.009
+ GHQ6_1         0.801*        0.013
+ GHQ7_1        -0.192         0.576*
+ GHQ8_1         0.038         0.618*
+ GHQ9_1         0.984*       -0.027
+ GHQ10_1        0.766*        0.048
+ GHQ11_1        0.573*       -0.087
+ GHQ12_1       -0.078         0.673*
+
+
+           GEOMIN FACTOR CORRELATIONS (* significant at 5% level)
+                  1             2
+              ________      ________
+      1         1.000
+      2        -0.051         1.000
+
+
+           ESTIMATED RESIDUAL VARIANCES
+              GHQ1_1        GHQ2_1        GHQ3_1        GHQ4_1        GHQ5_1
+              ________      ________      ________      ________      ________
+                0.772         0.566         0.447         0.585         0.375
+
+
+           ESTIMATED RESIDUAL VARIANCES
+              GHQ6_1        GHQ7_1        GHQ8_1        GHQ9_1        GHQ10_1
+              ________      ________      ________      ________      ________
+                0.360         0.620         0.620         0.029         0.415
+
+
+           ESTIMATED RESIDUAL VARIANCES
+              GHQ11_1       GHQ12_1
+              ________      ________
+                0.659         0.536
+
+
+           S.E. GEOMIN ROTATED LOADINGS
+                  1             2
+              ________      ________
+ GHQ1_1         0.097         0.086
+ GHQ2_1         0.079         0.095
+ GHQ3_1         0.005         0.069
+ GHQ4_1         0.089         0.076
+ GHQ5_1         0.064         0.046
+ GHQ6_1         0.057         0.071
+ GHQ7_1         0.101         0.082
+ GHQ8_1         0.106         0.080
+ GHQ9_1         0.039         0.082
+ GHQ10_1        0.065         0.110
+ GHQ11_1        0.099         0.119
+ GHQ12_1        0.102         0.078
+
+
+           S.E. GEOMIN FACTOR CORRELATIONS
+                  1             2
+              ________      ________
+      1         0.000
+      2         0.130         0.000
+
+
+           S.E. ESTIMATED RESIDUAL VARIANCES
+              GHQ1_1        GHQ2_1        GHQ3_1        GHQ4_1        GHQ5_1
+              ________      ________      ________      ________      ________
+                0.081         0.103         0.103         0.092         0.102
+
+
+           S.E. ESTIMATED RESIDUAL VARIANCES
+              GHQ6_1        GHQ7_1        GHQ8_1        GHQ9_1        GHQ10_1
+              ________      ________      ________      ________      ________
+                0.091         0.098         0.099         0.079         0.099
+
+
+           S.E. ESTIMATED RESIDUAL VARIANCES
+              GHQ11_1       GHQ12_1
+              ________      ________
+                0.119         0.106
+
+
+           Est./S.E. GEOMIN ROTATED LOADINGS
+                  1             2
+              ________      ________
+ GHQ1_1         2.980         4.588
+ GHQ2_1         8.354         0.308
+ GHQ3_1        -0.445        10.778
+ GHQ4_1         3.171         7.793
+ GHQ5_1        12.411        -0.197
+ GHQ6_1        13.996         0.191
+ GHQ7_1        -1.907         7.020
+ GHQ8_1         0.363         7.680
+ GHQ9_1        25.101        -0.329
+ GHQ10_1       11.722         0.442
+ GHQ11_1        5.799        -0.731
+ GHQ12_1       -0.767         8.590
+
+
+           Est./S.E. GEOMIN FACTOR CORRELATIONS
+                  1             2
+              ________      ________
+      1         0.000
+      2        -0.395         0.000
+
+
+           Est./S.E. ESTIMATED RESIDUAL VARIANCES
+              GHQ1_1        GHQ2_1        GHQ3_1        GHQ4_1        GHQ5_1
+              ________      ________      ________      ________      ________
+                9.505         5.471         4.351         6.360         3.684
+
+
+           Est./S.E. ESTIMATED RESIDUAL VARIANCES
+              GHQ6_1        GHQ7_1        GHQ8_1        GHQ9_1        GHQ10_1
+              ________      ________      ________      ________      ________
+                3.949         6.348         6.264         0.369         4.183
+
+
+           Est./S.E. ESTIMATED RESIDUAL VARIANCES
+              GHQ11_1       GHQ12_1
+              ________      ________
+                5.515         5.049
+
+
+           FACTOR STRUCTURE
+                  1             2
+              ________      ________
+ GHQ1_1         0.269         0.379
+ GHQ2_1         0.658        -0.005
+ GHQ3_1        -0.041         0.744
+ GHQ4_1         0.252         0.580
+ GHQ5_1         0.791        -0.050
+ GHQ6_1         0.800        -0.028
+ GHQ7_1        -0.222         0.586
+ GHQ8_1         0.007         0.616
+ GHQ9_1         0.985        -0.078
+ GHQ10_1        0.764         0.009
+ GHQ11_1        0.578        -0.116
+ GHQ12_1       -0.113         0.677
+
+
+EXPLORATORY FACTOR ANALYSIS WITH 3 FACTOR(S):
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                       33
+
+Chi-Square Test of Model Fit
+
+          Value                             24.246*
+          Degrees of Freedom                    33
+          P-Value                           0.8658
+
+*   The chi-square value for MLM, MLMV, MLR, ULSMV, WLSM and WLSMV cannot be used
+    for chi-square difference testing in the regular way.  MLM, MLR and WLSM
+    chi-square difference testing is described on the Mplus website.  MLMV, WLSMV,
+    and ULSMV difference testing is done using the DIFFTEST option.
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.000
+          90 Percent C.I.                    0.000  0.024
+          Probability RMSEA <= .05           0.999
+
+CFI/TLI
+
+          CFI                                1.000
+          TLI                                1.000
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                            774.286
+          Degrees of Freedom                    66
+          P-Value                           0.0000
+
+SRMR (Standardized Root Mean Square Residual)
+
+          Value                              0.045
+
+
+
+MINIMUM ROTATION FUNCTION VALUE       0.35792
+
+
+
+           GEOMIN ROTATED LOADINGS (* significant at 5% level)
+                  1             2             3
+              ________      ________      ________
+ GHQ1_1         0.262*        0.380*        0.048
+ GHQ2_1         0.679*        0.019        -0.052
+ GHQ3_1        -0.019         0.719*        0.005
+ GHQ4_1         0.002         0.705*        0.815
+ GHQ5_1         0.774*       -0.022         0.051
+ GHQ6_1         0.870*        0.009        -0.176
+ GHQ7_1        -0.178         0.573*       -0.062
+ GHQ8_1        -0.016         0.597*        0.098
+ GHQ9_1         0.988*       -0.045        -0.025
+ GHQ10_1        0.708*        0.021         0.176
+ GHQ11_1        0.491*       -0.110         0.241
+ GHQ12_1        0.008         0.714*       -0.253
+
+
+           GEOMIN FACTOR CORRELATIONS (* significant at 5% level)
+                  1             2             3
+              ________      ________      ________
+      1         1.000
+      2        -0.012         1.000
+      3         0.297        -0.097         1.000
+
+
+           ESTIMATED RESIDUAL VARIANCES
+              GHQ1_1        GHQ2_1        GHQ3_1        GHQ4_1        GHQ5_1
+              ________      ________      ________      ________      ________
+                0.783         0.557         0.483        -0.051         0.374
+
+
+           ESTIMATED RESIDUAL VARIANCES
+              GHQ6_1        GHQ7_1        GHQ8_1        GHQ9_1        GHQ10_1
+              ________      ________      ________      ________      ________
+                0.303         0.620         0.646         0.035         0.394
+
+
+           ESTIMATED RESIDUAL VARIANCES
+              GHQ11_1       GHQ12_1
+              ________      ________
+                0.612         0.392
+
+
+           S.E. GEOMIN ROTATED LOADINGS
+                  1             2             3
+              ________      ________      ________
+ GHQ1_1         0.117         0.088         0.136
+ GHQ2_1         0.090         0.095         0.158
+ GHQ3_1         0.111         0.071         0.050
+ GHQ4_1         0.008         0.277         0.421
+ GHQ5_1         0.075         0.095         0.130
+ GHQ6_1         0.090         0.033         0.168
+ GHQ7_1         0.106         0.085         0.145
+ GHQ8_1         0.119         0.087         0.142
+ GHQ9_1         0.041         0.083         0.067
+ GHQ10_1        0.088         0.068         0.161
+ GHQ11_1        0.115         0.165         0.161
+ GHQ12_1        0.028         0.115         0.221
+
+
+           S.E. GEOMIN FACTOR CORRELATIONS
+                  1             2             3
+              ________      ________      ________
+      1         0.000
+      2         0.143         0.000
+      3         0.156         0.284         0.000
+
+
+           S.E. ESTIMATED RESIDUAL VARIANCES
+              GHQ1_1        GHQ2_1        GHQ3_1        GHQ4_1        GHQ5_1
+              ________      ________      ________      ________      ________
+                0.079         0.104         0.100         0.613         0.102
+
+
+           S.E. ESTIMATED RESIDUAL VARIANCES
+              GHQ6_1        GHQ7_1        GHQ8_1        GHQ9_1        GHQ10_1
+              ________      ________      ________      ________      ________
+                0.108         0.103         0.094         0.079         0.105
+
+
+           S.E. ESTIMATED RESIDUAL VARIANCES
+              GHQ11_1       GHQ12_1
+              ________      ________
+                0.133         0.154
+
+
+           Est./S.E. GEOMIN ROTATED LOADINGS
+                  1             2             3
+              ________      ________      ________
+ GHQ1_1         2.244         4.303         0.354
+ GHQ2_1         7.557         0.205        -0.328
+ GHQ3_1        -0.168        10.188         0.093
+ GHQ4_1         0.287         2.546         1.936
+ GHQ5_1        10.385        -0.235         0.396
+ GHQ6_1         9.684         0.273        -1.049
+ GHQ7_1        -1.689         6.747        -0.427
+ GHQ8_1        -0.134         6.895         0.696
+ GHQ9_1        24.078        -0.539        -0.365
+ GHQ10_1        8.046         0.311         1.088
+ GHQ11_1        4.263        -0.667         1.492
+ GHQ12_1        0.299         6.185        -1.145
+
+
+           Est./S.E. GEOMIN FACTOR CORRELATIONS
+                  1             2             3
+              ________      ________      ________
+      1         0.000
+      2        -0.081         0.000
+      3         1.908        -0.341         0.000
+
+
+           Est./S.E. ESTIMATED RESIDUAL VARIANCES
+              GHQ1_1        GHQ2_1        GHQ3_1        GHQ4_1        GHQ5_1
+              ________      ________      ________      ________      ________
+                9.861         5.361         4.816        -0.083         3.648
+
+
+           Est./S.E. ESTIMATED RESIDUAL VARIANCES
+              GHQ6_1        GHQ7_1        GHQ8_1        GHQ9_1        GHQ10_1
+              ________      ________      ________      ________      ________
+                2.791         6.045         6.860         0.448         3.764
+
+
+           Est./S.E. ESTIMATED RESIDUAL VARIANCES
+              GHQ11_1       GHQ12_1
+              ________      ________
+                4.607         2.548
+
+
+           FACTOR STRUCTURE
+                  1             2             3
+              ________      ________      ________
+ GHQ1_1         0.272         0.372         0.089
+ GHQ2_1         0.663         0.017         0.148
+ GHQ3_1        -0.025         0.718        -0.070
+ GHQ4_1         0.236         0.626         0.747
+ GHQ5_1         0.789        -0.036         0.283
+ GHQ6_1         0.818         0.016         0.081
+ GHQ7_1        -0.203         0.581        -0.170
+ GHQ8_1         0.006         0.587         0.036
+ GHQ9_1         0.981        -0.054         0.273
+ GHQ10_1        0.760        -0.004         0.384
+ GHQ11_1        0.564        -0.139         0.397
+ GHQ12_1       -0.075         0.738        -0.320
+
+
+MODIFICATION INDICES
+
+
+     MODIFICATION INDICES FOR ANALYSIS WITH 1 FACTOR(S)
+
+
+
+     MODIFICATION INDICES
+
+
+           THETA
+              GHQ1_1        GHQ2_1        GHQ3_1        GHQ4_1        GHQ5_1
+              ________      ________      ________      ________      ________
+ GHQ1_1         0.000
+ GHQ2_1         0.057         0.000
+ GHQ3_1        10.462         0.263         0.000
+ GHQ4_1        11.710         0.172        31.959         0.000
+ GHQ5_1         0.391         2.513         1.683         0.164         0.000
+ GHQ6_1         0.000         0.045         0.007         1.548         0.076
+ GHQ7_1         7.036         0.333        27.028        12.556         0.003
+ GHQ8_1         3.368         1.227        24.701        30.164         0.461
+ GHQ9_1         0.348         0.204         0.003         0.509         0.495
+ GHQ10_1        0.357         0.563         0.210         1.269         0.732
+ GHQ11_1        2.494         0.381         0.083         0.632         0.109
+ GHQ12_1        7.676         0.167        55.578        10.067         0.003
+
+
+           THETA
+              GHQ6_1        GHQ7_1        GHQ8_1        GHQ9_1        GHQ10_1
+              ________      ________      ________      ________      ________
+ GHQ6_1         0.000
+ GHQ7_1         0.018         0.000
+ GHQ8_1         0.119        15.543         0.000
+ GHQ9_1         0.996         0.004         1.103         0.000
+ GHQ10_1        0.049         0.951         0.293         0.007         0.000
+ GHQ11_1        0.692         1.062         0.447         0.237         0.108
+ GHQ12_1        0.516        26.608        27.073         0.191         0.722
+
+
+           THETA
+              GHQ11_1       GHQ12_1
+              ________      ________
+ GHQ11_1        0.000
+ GHQ12_1        1.430         0.000
+
+
+     EXPECTED PARAMETER CHANGE
+
+
+           THETA
+              GHQ1_1        GHQ2_1        GHQ3_1        GHQ4_1        GHQ5_1
+              ________      ________      ________      ________      ________
+ GHQ1_1         0.000
+ GHQ2_1         0.028         0.000
+ GHQ3_1         0.285        -0.060         0.000
+ GHQ4_1         0.296        -0.049         0.455         0.000
+ GHQ5_1         0.073         0.167        -0.154         0.047         0.000
+ GHQ6_1        -0.002        -0.024        -0.010        -0.141        -0.029
+ GHQ7_1         0.250        -0.068         0.431         0.327        -0.006
+ GHQ8_1         0.172         0.135         0.412         0.455        -0.084
+ GHQ9_1        -0.073        -0.054         0.007        -0.089        -0.080
+ GHQ10_1        0.070        -0.093         0.055         0.130        -0.100
+ GHQ11_1       -0.194        -0.083        -0.035         0.094         0.040
+ GHQ12_1        0.253         0.049         0.544         0.287         0.006
+
+
+           THETA
+              GHQ6_1        GHQ7_1        GHQ8_1        GHQ9_1        GHQ10_1
+              ________      ________      ________      ________      ________
+ GHQ6_1         0.000
+ GHQ7_1         0.015         0.000
+ GHQ8_1        -0.040         0.351         0.000
+ GHQ9_1         0.109         0.008        -0.136         0.000
+ GHQ10_1        0.023        -0.117         0.068         0.009         0.000
+ GHQ11_1       -0.105        -0.124        -0.083         0.060         0.041
+ GHQ12_1        0.083         0.429         0.430        -0.055        -0.103
+
+
+           THETA
+              GHQ11_1       GHQ12_1
+              ________      ________
+ GHQ11_1        0.000
+ GHQ12_1       -0.144         0.000
+
+
+     MODIFICATION INDICES FOR ANALYSIS WITH 2 FACTOR(S)
+
+
+
+     MODIFICATION INDICES
+
+
+           THETA
+              GHQ1_1        GHQ2_1        GHQ3_1        GHQ4_1        GHQ5_1
+              ________      ________      ________      ________      ________
+ GHQ1_1         0.000
+ GHQ2_1         0.039         0.000
+ GHQ3_1         0.017         0.517         0.000
+ GHQ4_1         0.638         0.658         0.040         0.000
+ GHQ5_1         0.776         3.835         1.843         0.311         0.000
+ GHQ6_1         0.002         0.048         0.016         3.322         0.086
+ GHQ7_1         0.138         0.388         0.044         0.057         0.191
+ GHQ8_1         1.138         2.061         0.981         2.573         0.349
+ GHQ9_1         0.290         0.247         0.722         0.622         0.714
+ GHQ10_1        0.302         0.825         0.243         1.111         1.045
+ GHQ11_1        2.508         0.533         0.403         2.720         0.134
+ GHQ12_1        0.027         0.378         1.173         3.848         0.293
+
+
+           THETA
+              GHQ6_1        GHQ7_1        GHQ8_1        GHQ9_1        GHQ10_1
+              ________      ________      ________      ________      ________
+ GHQ6_1         0.000
+ GHQ7_1         0.297         0.000
+ GHQ8_1         0.097         0.043         0.000
+ GHQ9_1         1.732         0.792         0.719         0.000
+ GHQ10_1        0.083         1.502         0.322         0.022         0.000
+ GHQ11_1        1.017         0.214         0.013         0.254         0.184
+ GHQ12_1        1.623         0.220         0.067         0.038         1.457
+
+
+           THETA
+              GHQ11_1       GHQ12_1
+              ________      ________
+ GHQ11_1        0.000
+ GHQ12_1        0.416         0.000
+
+
+     EXPECTED PARAMETER CHANGE
+
+
+           THETA
+              GHQ1_1        GHQ2_1        GHQ3_1        GHQ4_1        GHQ5_1
+              ________      ________      ________      ________      ________
+ GHQ1_1         0.000
+ GHQ2_1         0.020         0.000
+ GHQ3_1        -0.012        -0.081         0.000
+ GHQ4_1         0.068        -0.086         0.019         0.000
+ GHQ5_1         0.088         0.170        -0.154         0.059         0.000
+ GHQ6_1        -0.004        -0.020         0.014        -0.187        -0.026
+ GHQ7_1         0.033        -0.066        -0.021        -0.022         0.047
+ GHQ8_1        -0.095         0.157        -0.098         0.143        -0.065
+ GHQ9_1        -0.057        -0.048         0.102        -0.089        -0.079
+ GHQ10_1        0.055        -0.093         0.057         0.111        -0.098
+ GHQ11_1       -0.166        -0.081         0.073         0.177         0.037
+ GHQ12_1       -0.015         0.068         0.109        -0.189         0.060
+
+
+           THETA
+              GHQ6_1        GHQ7_1        GHQ8_1        GHQ9_1        GHQ10_1
+              ________      ________      ________      ________      ________
+ GHQ6_1         0.000
+ GHQ7_1         0.056         0.000
+ GHQ8_1        -0.033        -0.019         0.000
+ GHQ9_1         0.118         0.102        -0.099         0.000
+ GHQ10_1        0.025        -0.131         0.064         0.014         0.000
+ GHQ11_1       -0.105        -0.050        -0.013         0.051         0.044
+ GHQ12_1        0.135         0.044         0.024         0.023        -0.134
+
+
+           THETA
+              GHQ11_1       GHQ12_1
+              ________      ________
+ GHQ11_1        0.000
+ GHQ12_1       -0.072         0.000
+
+
+     MODIFICATION INDICES FOR ANALYSIS WITH 3 FACTOR(S)
+
+
+
+     MODIFICATION INDICES
+
+
+           THETA
+              GHQ1_1        GHQ2_1        GHQ3_1        GHQ4_1        GHQ5_1
+              ________      ________      ________      ________      ________
+ GHQ1_1         0.000
+ GHQ2_1         0.053         0.000
+ GHQ3_1         0.046         0.713         0.000
+ GHQ4_1         0.265         0.174         0.376         0.000
+ GHQ5_1         0.939         4.368         2.040         0.641         0.000
+ GHQ6_1         0.013         0.504         0.036         0.053         0.189
+ GHQ7_1         0.271         0.686         0.018         0.001         0.201
+ GHQ8_1         0.702         2.674         0.062         0.140         0.296
+ GHQ9_1         0.258         0.382         0.693         0.099         0.567
+ GHQ10_1        0.499         0.760         0.673         0.380         1.420
+ GHQ11_1        2.677         0.347         0.966         0.000         0.143
+ GHQ12_1        0.195         0.048         0.267         0.002         0.345
+
+
+           THETA
+              GHQ6_1        GHQ7_1        GHQ8_1        GHQ9_1        GHQ10_1
+              ________      ________      ________      ________      ________
+ GHQ6_1         0.000
+ GHQ7_1         0.028         0.000
+ GHQ8_1         0.047         0.021         0.000
+ GHQ9_1         0.428         0.619         0.562         0.000
+ GHQ10_1        0.528         1.090         0.591         0.216         0.000
+ GHQ11_1        0.332         0.023         0.008         0.830         0.006
+ GHQ12_1        0.033         0.449         0.187         0.083         0.726
+
+
+           THETA
+              GHQ11_1       GHQ12_1
+              ________      ________
+ GHQ11_1        0.000
+ GHQ12_1        0.114         0.000
+
+
+     EXPECTED PARAMETER CHANGE
+
+
+           THETA
+              GHQ1_1        GHQ2_1        GHQ3_1        GHQ4_1        GHQ5_1
+              ________      ________      ________      ________      ________
+ GHQ1_1         0.000
+ GHQ2_1         0.022         0.000
+ GHQ3_1         0.018        -0.090         0.000
+ GHQ4_1         0.104        -0.089        -0.146         0.000
+ GHQ5_1         0.090         0.172        -0.151         0.164         0.000
+ GHQ6_1        -0.011        -0.070        -0.021         0.070        -0.040
+ GHQ7_1         0.043        -0.084         0.013         0.005         0.046
+ GHQ8_1        -0.070         0.169        -0.024         0.102        -0.056
+ GHQ9_1        -0.051        -0.059         0.094        -0.068        -0.068
+ GHQ10_1        0.068        -0.085         0.090        -0.165        -0.111
+ GHQ11_1       -0.166        -0.064         0.111         0.006         0.038
+ GHQ12_1       -0.044         0.027         0.072         0.013         0.070
+
+
+           THETA
+              GHQ6_1        GHQ7_1        GHQ8_1        GHQ9_1        GHQ10_1
+              ________      ________      ________      ________      ________
+ GHQ6_1         0.000
+ GHQ7_1         0.017         0.000
+ GHQ8_1        -0.023         0.013         0.000
+ GHQ9_1         0.070         0.086        -0.082         0.000
+ GHQ10_1        0.065        -0.108         0.083         0.041         0.000
+ GHQ11_1       -0.063        -0.016        -0.010         0.091         0.008
+ GHQ12_1        0.024        -0.084         0.047        -0.036        -0.106
+
+
+           THETA
+              GHQ11_1       GHQ12_1
+              ________      ________
+ GHQ11_1        0.000
+ GHQ12_1        0.046         0.000
+
+
+     Beginning Time:  11:30:29
+        Ending Time:  11:30:29
+       Elapsed Time:  00:00:00
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2019 Muthen & Muthen

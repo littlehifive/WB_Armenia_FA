@@ -1,0 +1,1531 @@
+Mplus VERSION 8.4 (Mac)
+MUTHEN & MUTHEN
+12/16/2024   4:11 PM
+
+INPUT INSTRUCTIONS
+
+  Title: Student GHQ Baseline EFA;
+
+  Data:
+     File is ../dat_stu_1.txt;
+
+  Variable:
+     Names are studentid age gender grade country
+     dass1_1 dass2_1 dass3_1 dass4_1 dass5_1 dass6_1 dass7_1
+     dass8_1 dass9_1 dass10_1 dass11_1 dass12_1 dass13_1 dass14_1
+     dass15_1 dass16_1 dass17_1 dass18_1 dass19_1 dass20_1 dass21_1
+     phq1_1 phq2_1 phq3_1 phq4_1 phq5_1 phq6_1 phq7_1 phq8_1
+     gad1_1 gad2_1 gad3_1 gad4_1 gad5_1 gad6_1 gad7_1
+     ghq1_1 ghq2_1 ghq3_1 ghq4_1 ghq5_1 ghq6_1 ghq7_1 ghq8_1
+     ghq9_1 ghq10_1 ghq11_1 ghq12_1
+     erica1_1 erica2_1 erica3_1 erica4_1 erica5_1 erica6_1 erica7_1
+     erica8_1 erica9_1 erica10_1 erica11_1 erica12_1 erica13_1
+     erica14_1 erica15_1 erica16_1 erica17_1
+     sswq1_1 sswq2_1 sswq3_1 sswq4_1 sswq5_1 sswq6_1 sswq7_1
+     sswq8_1 sswq9_1 sswq10_1 sswq11_1 sswq12_1 sswq13_1 sswq14_1
+     sswq15_1 sswq16_1 atti1_1 atti2_1 atti3_1 atti4_1 atti5_1 atti6_1
+     half;
+     Missing are . ;
+
+    Usevariable are
+  	erica1_1 erica2_1 erica3_1 erica4_1 erica5_1 erica6_1 erica7_1
+    erica8_1 erica9_1 erica10_1 erica11_1 erica12_1 erica13_1
+    erica14_1 erica15_1 erica16_1 erica17_1;
+
+    Categorical is
+  	erica1_1 erica2_1 erica3_1 erica4_1 erica5_1 erica6_1 erica7_1
+    erica8_1 erica9_1 erica10_1 erica11_1 erica12_1 erica13_1
+    erica14_1 erica15_1 erica16_1 erica17_1;
+
+    Idvariable is studentid;
+
+    Useobservations is half eq 1;
+
+  Analysis:
+     Type = efa 1 3;
+     Estimator = wlsmv;
+
+  Output: sampstat stdy modindices(all);
+
+
+
+*** WARNING in VARIABLE command
+  Note that only the first 8 characters of variable names are used in the output.
+  Shorten variable names to avoid any confusion.
+*** WARNING in OUTPUT command
+  STANDARDIZED (STD, STDY, STDYX) options are not available for TYPE=EFA.
+  Request for STANDARDIZED options will be ignored.  Note that STANDARDIZED options
+  are available with the use of EFA factors (ESEM) declared in the MODEL command.
+*** WARNING
+  Data set contains cases with missing on all variables.
+  These cases were not included in the analysis.
+  Number of cases with missing on all variables:  1
+   3 WARNING(S) FOUND IN THE INPUT INSTRUCTIONS
+
+
+
+Student GHQ Baseline EFA;
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                         269
+
+Number of dependent variables                                   17
+Number of independent variables                                  0
+Number of continuous latent variables                            0
+
+Observed dependent variables
+
+  Binary and ordered categorical (ordinal)
+   ERICA1_1    ERICA2_1    ERICA3_1    ERICA4_1    ERICA5_1    ERICA6_1
+   ERICA7_1    ERICA8_1    ERICA9_1    ERICA10_    ERICA11_    ERICA12_
+   ERICA13_    ERICA14_    ERICA15_    ERICA16_    ERICA17_
+
+Variables with special functions
+
+  ID variable           STUDENTI
+
+Estimator                                                    WLSMV
+Rotation                                                    GEOMIN
+Row standardization                                    CORRELATION
+Type of rotation                                           OBLIQUE
+Epsilon value                                               Varies
+Maximum number of iterations                                  1000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+Maximum number of iterations for H1                           2000
+Convergence criterion for H1                             0.100D-03
+Optimization Specifications for the Exploratory Factor Analysis
+Rotation Algorithm
+  Number of random starts                                       30
+  Maximum number of iterations                               10000
+  Derivative convergence criterion                       0.100D-04
+Link                                                        PROBIT
+
+Input data file(s)
+  ../dat_stu_1.txt
+
+Input data format  FREE
+
+
+SUMMARY OF DATA
+
+     Number of missing data patterns             1
+
+
+COVARIANCE COVERAGE OF DATA
+
+Minimum covariance coverage value   0.100
+
+
+     PROPORTION OF DATA PRESENT
+
+
+           Covariance Coverage
+              ERICA1_1      ERICA2_1      ERICA3_1      ERICA4_1      ERICA5_1
+              ________      ________      ________      ________      ________
+ ERICA1_1       1.000
+ ERICA2_1       1.000         1.000
+ ERICA3_1       1.000         1.000         1.000
+ ERICA4_1       1.000         1.000         1.000         1.000
+ ERICA5_1       1.000         1.000         1.000         1.000         1.000
+ ERICA6_1       1.000         1.000         1.000         1.000         1.000
+ ERICA7_1       1.000         1.000         1.000         1.000         1.000
+ ERICA8_1       1.000         1.000         1.000         1.000         1.000
+ ERICA9_1       1.000         1.000         1.000         1.000         1.000
+ ERICA10_       1.000         1.000         1.000         1.000         1.000
+ ERICA11_       1.000         1.000         1.000         1.000         1.000
+ ERICA12_       1.000         1.000         1.000         1.000         1.000
+ ERICA13_       1.000         1.000         1.000         1.000         1.000
+ ERICA14_       1.000         1.000         1.000         1.000         1.000
+ ERICA15_       1.000         1.000         1.000         1.000         1.000
+ ERICA16_       1.000         1.000         1.000         1.000         1.000
+ ERICA17_       1.000         1.000         1.000         1.000         1.000
+
+
+           Covariance Coverage
+              ERICA6_1      ERICA7_1      ERICA8_1      ERICA9_1      ERICA10_
+              ________      ________      ________      ________      ________
+ ERICA6_1       1.000
+ ERICA7_1       1.000         1.000
+ ERICA8_1       1.000         1.000         1.000
+ ERICA9_1       1.000         1.000         1.000         1.000
+ ERICA10_       1.000         1.000         1.000         1.000         1.000
+ ERICA11_       1.000         1.000         1.000         1.000         1.000
+ ERICA12_       1.000         1.000         1.000         1.000         1.000
+ ERICA13_       1.000         1.000         1.000         1.000         1.000
+ ERICA14_       1.000         1.000         1.000         1.000         1.000
+ ERICA15_       1.000         1.000         1.000         1.000         1.000
+ ERICA16_       1.000         1.000         1.000         1.000         1.000
+ ERICA17_       1.000         1.000         1.000         1.000         1.000
+
+
+           Covariance Coverage
+              ERICA11_      ERICA12_      ERICA13_      ERICA14_      ERICA15_
+              ________      ________      ________      ________      ________
+ ERICA11_       1.000
+ ERICA12_       1.000         1.000
+ ERICA13_       1.000         1.000         1.000
+ ERICA14_       1.000         1.000         1.000         1.000
+ ERICA15_       1.000         1.000         1.000         1.000         1.000
+ ERICA16_       1.000         1.000         1.000         1.000         1.000
+ ERICA17_       1.000         1.000         1.000         1.000         1.000
+
+
+           Covariance Coverage
+              ERICA16_      ERICA17_
+              ________      ________
+ ERICA16_       1.000
+ ERICA17_       1.000         1.000
+
+
+UNIVARIATE PROPORTIONS AND COUNTS FOR CATEGORICAL VARIABLES
+
+    ERICA1_1
+      Category 1    0.074           20.000
+      Category 2    0.227           61.000
+      Category 3    0.257           69.000
+      Category 4    0.234           63.000
+      Category 5    0.208           56.000
+    ERICA2_1
+      Category 1    0.145           39.000
+      Category 2    0.342           92.000
+      Category 3    0.186           50.000
+      Category 4    0.216           58.000
+      Category 5    0.112           30.000
+    ERICA3_1
+      Category 1    0.063           17.000
+      Category 2    0.160           43.000
+      Category 3    0.145           39.000
+      Category 4    0.260           70.000
+      Category 5    0.372          100.000
+    ERICA4_1
+      Category 1    0.071           19.000
+      Category 2    0.208           56.000
+      Category 3    0.190           51.000
+      Category 4    0.230           62.000
+      Category 5    0.301           81.000
+    ERICA5_1
+      Category 1    0.015            4.000
+      Category 2    0.167           45.000
+      Category 3    0.197           53.000
+      Category 4    0.305           82.000
+      Category 5    0.316           85.000
+    ERICA6_1
+      Category 1    0.108           29.000
+      Category 2    0.253           68.000
+      Category 3    0.123           33.000
+      Category 4    0.212           57.000
+      Category 5    0.305           82.000
+    ERICA7_1
+      Category 1    0.078           21.000
+      Category 2    0.257           69.000
+      Category 3    0.208           56.000
+      Category 4    0.253           68.000
+      Category 5    0.204           55.000
+    ERICA8_1
+      Category 1    0.071           19.000
+      Category 2    0.249           67.000
+      Category 3    0.164           44.000
+      Category 4    0.257           69.000
+      Category 5    0.260           70.000
+    ERICA9_1
+      Category 1    0.067           18.000
+      Category 2    0.149           40.000
+      Category 3    0.223           60.000
+      Category 4    0.268           72.000
+      Category 5    0.294           79.000
+    ERICA10_
+      Category 1    0.011            3.000
+      Category 2    0.030            8.000
+      Category 3    0.141           38.000
+      Category 4    0.446          120.000
+      Category 5    0.372          100.000
+    ERICA11_
+      Category 1    0.052           14.000
+      Category 2    0.138           37.000
+      Category 3    0.219           59.000
+      Category 4    0.439          118.000
+      Category 5    0.152           41.000
+    ERICA12_
+      Category 1    0.115           31.000
+      Category 2    0.264           71.000
+      Category 3    0.208           56.000
+      Category 4    0.197           53.000
+      Category 5    0.216           58.000
+    ERICA13_
+      Category 1    0.030            8.000
+      Category 2    0.041           11.000
+      Category 3    0.145           39.000
+      Category 4    0.532          143.000
+      Category 5    0.253           68.000
+    ERICA14_
+      Category 1    0.019            5.000
+      Category 2    0.030            8.000
+      Category 3    0.078           21.000
+      Category 4    0.416          112.000
+      Category 5    0.457          123.000
+    ERICA15_
+      Category 1    0.063           17.000
+      Category 2    0.104           28.000
+      Category 3    0.253           68.000
+      Category 4    0.420          113.000
+      Category 5    0.160           43.000
+    ERICA16_
+      Category 1    0.022            6.000
+      Category 2    0.041           11.000
+      Category 3    0.037           10.000
+      Category 4    0.342           92.000
+      Category 5    0.558          150.000
+    ERICA17_
+      Category 1    0.007            2.000
+      Category 2    0.026            7.000
+      Category 3    0.074           20.000
+      Category 4    0.234           63.000
+      Category 5    0.658          177.000
+
+
+SAMPLE STATISTICS
+
+
+     ESTIMATED SAMPLE STATISTICS
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              ERICA1_1      ERICA1_1      ERICA1_1      ERICA1_1      ERICA2_1
+              ________      ________      ________      ________      ________
+               -1.444        -0.521         0.145         0.813        -1.058
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              ERICA2_1      ERICA2_1      ERICA2_1      ERICA3_1      ERICA3_1
+              ________      ________      ________      ________      ________
+               -0.033         0.448         1.218        -1.528        -0.762
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              ERICA3_1      ERICA3_1      ERICA4_1      ERICA4_1      ERICA4_1
+              ________      ________      ________      ________      ________
+               -0.337         0.327        -1.471        -0.586        -0.079
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              ERICA4_1      ERICA5_1      ERICA5_1      ERICA5_1      ERICA5_1
+              ________      ________      ________      ________      ________
+                0.521        -2.174        -0.907        -0.308         0.479
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              ERICA6_1      ERICA6_1      ERICA6_1      ERICA6_1      ERICA7_1
+              ________      ________      ________      ________      ________
+               -1.238        -0.357        -0.042         0.511        -1.418
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              ERICA7_1      ERICA7_1      ERICA7_1      ERICA8_1      ERICA8_1
+              ________      ________      ________      ________      ________
+               -0.427         0.107         0.826        -1.471        -0.469
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              ERICA8_1      ERICA8_1      ERICA9_1      ERICA9_1      ERICA9_1
+              ________      ________      ________      ________      ________
+               -0.042         0.643        -1.499        -0.787        -0.154
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              ERICA9_1      ERICA10_      ERICA10_      ERICA10_      ERICA10_
+              ________      ________      ________      ________      ________
+                0.543        -2.285        -1.740        -0.907         0.327
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              ERICA11_      ERICA11_      ERICA11_      ERICA11_      ERICA12_
+              ________      ________      ________      ________      ________
+               -1.625        -0.879        -0.230         1.026        -1.199
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              ERICA12_      ERICA12_      ERICA12_      ERICA13_      ERICA13_
+              ________      ________      ________      ________      ________
+               -0.308         0.221         0.787        -1.885        -1.471
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              ERICA13_      ERICA13_      ERICA14_      ERICA14_      ERICA14_
+              ________      ________      ________      ________      ________
+               -0.787         0.666        -2.084        -1.661        -1.144
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              ERICA14_      ERICA15_      ERICA15_      ERICA15_      ERICA15_
+              ________      ________      ________      ________      ________
+                0.107        -1.528        -0.965        -0.202         0.995
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              ERICA16_      ERICA16_      ERICA16_      ERICA16_      ERICA17_
+              ________      ________      ________      ________      ________
+               -2.008        -1.528        -1.279        -0.145        -2.436
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              ERICA17_      ERICA17_      ERICA17_
+              ________      ________      ________
+               -1.832        -1.238        -0.407
+
+
+           CORRELATION MATRIX (WITH VARIANCES ON THE DIAGONAL)
+              ERICA1_1      ERICA2_1      ERICA3_1      ERICA4_1      ERICA5_1
+              ________      ________      ________      ________      ________
+ ERICA1_1
+ ERICA2_1       0.513
+ ERICA3_1       0.300         0.351
+ ERICA4_1       0.328         0.322         0.316
+ ERICA5_1       0.329         0.339         0.590         0.416
+ ERICA6_1       0.399         0.327         0.292         0.406         0.404
+ ERICA7_1       0.312         0.237         0.328         0.367         0.479
+ ERICA8_1       0.336         0.311         0.483         0.462         0.425
+ ERICA9_1       0.463         0.370         0.347         0.570         0.405
+ ERICA10_       0.207         0.058         0.168         0.272         0.191
+ ERICA11_      -0.041        -0.049        -0.064         0.135        -0.033
+ ERICA12_       0.376         0.316         0.215         0.400         0.308
+ ERICA13_      -0.130        -0.235        -0.092         0.058        -0.136
+ ERICA14_      -0.154        -0.204         0.002         0.124        -0.060
+ ERICA15_      -0.232        -0.199        -0.268        -0.140        -0.184
+ ERICA16_      -0.088        -0.159        -0.014         0.054         0.125
+ ERICA17_       0.163         0.112         0.125         0.222         0.247
+
+
+           CORRELATION MATRIX (WITH VARIANCES ON THE DIAGONAL)
+              ERICA6_1      ERICA7_1      ERICA8_1      ERICA9_1      ERICA10_
+              ________      ________      ________      ________      ________
+ ERICA7_1       0.319
+ ERICA8_1       0.525         0.344
+ ERICA9_1       0.497         0.472         0.579
+ ERICA10_       0.232         0.196         0.380         0.486
+ ERICA11_       0.089         0.043         0.170         0.139         0.303
+ ERICA12_       0.338         0.258         0.359         0.506         0.256
+ ERICA13_      -0.144        -0.106         0.023         0.006         0.276
+ ERICA14_       0.087        -0.030        -0.010         0.029         0.315
+ ERICA15_      -0.206        -0.140        -0.225        -0.239        -0.062
+ ERICA16_       0.026         0.140         0.027         0.104         0.255
+ ERICA17_       0.368         0.149         0.325         0.232         0.289
+
+
+           CORRELATION MATRIX (WITH VARIANCES ON THE DIAGONAL)
+              ERICA11_      ERICA12_      ERICA13_      ERICA14_      ERICA15_
+              ________      ________      ________      ________      ________
+ ERICA12_       0.000
+ ERICA13_       0.259        -0.079
+ ERICA14_       0.249        -0.049         0.328
+ ERICA15_       0.080        -0.176         0.094         0.257
+ ERICA16_       0.223         0.044         0.260         0.585         0.182
+ ERICA17_       0.119         0.201         0.090         0.340         0.154
+
+
+           CORRELATION MATRIX (WITH VARIANCES ON THE DIAGONAL)
+              ERICA16_      ERICA17_
+              ________      ________
+ ERICA17_       0.295
+
+
+SUMMARY OF MODEL FIT INFORMATION
+
+
+                   Number of                   Degrees of
+     Model        Parameters      Chi-Square    Freedom     P-Value
+
+     1-factor          17            676.901       119       0.0000
+     2-factor          33            226.523       103       0.0000
+     3-factor          48            140.861        88       0.0003
+
+                                               Degrees of
+     Models Compared              Chi-Square    Freedom     P-Value
+
+     1-factor against 2-factor       283.978        16       0.0000
+     2-factor against 3-factor        77.757        15       0.0000
+
+
+
+RESULTS FOR EXPLORATORY FACTOR ANALYSIS
+
+
+           EIGENVALUES FOR SAMPLE CORRELATION MATRIX
+                  1             2             3             4             5
+              ________      ________      ________      ________      ________
+                4.932         2.611         1.199         1.050         0.856
+
+
+           EIGENVALUES FOR SAMPLE CORRELATION MATRIX
+                  6             7             8             9            10
+              ________      ________      ________      ________      ________
+                0.821         0.763         0.720         0.659         0.620
+
+
+           EIGENVALUES FOR SAMPLE CORRELATION MATRIX
+                 11            12            13            14            15
+              ________      ________      ________      ________      ________
+                0.566         0.461         0.447         0.406         0.390
+
+
+           EIGENVALUES FOR SAMPLE CORRELATION MATRIX
+                 16            17
+              ________      ________
+                0.285         0.214
+
+
+EXPLORATORY FACTOR ANALYSIS WITH 1 FACTOR(S):
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                       17
+
+Chi-Square Test of Model Fit
+
+          Value                            676.901*
+          Degrees of Freedom                   119
+          P-Value                           0.0000
+
+*   The chi-square value for MLM, MLMV, MLR, ULSMV, WLSM and WLSMV cannot be used
+    for chi-square difference testing in the regular way.  MLM, MLR and WLSM
+    chi-square difference testing is described on the Mplus website.  MLMV, WLSMV,
+    and ULSMV difference testing is done using the DIFFTEST option.
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.132
+          90 Percent C.I.                    0.122  0.142
+          Probability RMSEA <= .05           0.000
+
+CFI/TLI
+
+          CFI                                0.715
+          TLI                                0.674
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                           2090.306
+          Degrees of Freedom                   136
+          P-Value                           0.0000
+
+SRMR (Standardized Root Mean Square Residual)
+
+          Value                              0.125
+
+
+
+MINIMUM ROTATION FUNCTION VALUE       4.43695
+
+
+
+           GEOMIN ROTATED LOADINGS (* significant at 5% level)
+                  1
+              ________
+ ERICA1_1       0.590*
+ ERICA2_1       0.525*
+ ERICA3_1       0.599*
+ ERICA4_1       0.644*
+ ERICA5_1       0.669*
+ ERICA6_1       0.640*
+ ERICA7_1       0.558*
+ ERICA8_1       0.710*
+ ERICA9_1       0.794*
+ ERICA10_       0.441*
+ ERICA11_       0.110
+ ERICA12_       0.550*
+ ERICA13_      -0.059
+ ERICA14_       0.044
+ ERICA15_      -0.283*
+ ERICA16_       0.101
+ ERICA17_       0.362*
+
+
+           GEOMIN FACTOR CORRELATIONS (* significant at 5% level)
+                  1
+              ________
+      1         1.000
+
+
+           ESTIMATED RESIDUAL VARIANCES
+              ERICA1_1      ERICA2_1      ERICA3_1      ERICA4_1      ERICA5_1
+              ________      ________      ________      ________      ________
+                0.652         0.725         0.642         0.586         0.552
+
+
+           ESTIMATED RESIDUAL VARIANCES
+              ERICA6_1      ERICA7_1      ERICA8_1      ERICA9_1      ERICA10_
+              ________      ________      ________      ________      ________
+                0.590         0.689         0.495         0.369         0.806
+
+
+           ESTIMATED RESIDUAL VARIANCES
+              ERICA11_      ERICA12_      ERICA13_      ERICA14_      ERICA15_
+              ________      ________      ________      ________      ________
+                0.988         0.698         0.997         0.998         0.920
+
+
+           ESTIMATED RESIDUAL VARIANCES
+              ERICA16_      ERICA17_
+              ________      ________
+                0.990         0.869
+
+
+           S.E. GEOMIN ROTATED LOADINGS
+                  1
+              ________
+ ERICA1_1       0.043
+ ERICA2_1       0.047
+ ERICA3_1       0.041
+ ERICA4_1       0.042
+ ERICA5_1       0.037
+ ERICA6_1       0.042
+ ERICA7_1       0.044
+ ERICA8_1       0.035
+ ERICA9_1       0.029
+ ERICA10_       0.055
+ ERICA11_       0.057
+ ERICA12_       0.044
+ ERICA13_       0.063
+ ERICA14_       0.063
+ ERICA15_       0.055
+ ERICA16_       0.068
+ ERICA17_       0.067
+
+
+           S.E. GEOMIN FACTOR CORRELATIONS
+                  1
+              ________
+      1         0.000
+
+
+           S.E. ESTIMATED RESIDUAL VARIANCES
+              ERICA1_1      ERICA2_1      ERICA3_1      ERICA4_1      ERICA5_1
+              ________      ________      ________      ________      ________
+                0.051         0.049         0.049         0.054         0.050
+
+
+           S.E. ESTIMATED RESIDUAL VARIANCES
+              ERICA6_1      ERICA7_1      ERICA8_1      ERICA9_1      ERICA10_
+              ________      ________      ________      ________      ________
+                0.054         0.049         0.050         0.046         0.048
+
+
+           S.E. ESTIMATED RESIDUAL VARIANCES
+              ERICA11_      ERICA12_      ERICA13_      ERICA14_      ERICA15_
+              ________      ________      ________      ________      ________
+                0.013         0.048         0.007         0.006         0.031
+
+
+           S.E. ESTIMATED RESIDUAL VARIANCES
+              ERICA16_      ERICA17_
+              ________      ________
+                0.014         0.048
+
+
+           Est./S.E. GEOMIN ROTATED LOADINGS
+                  1
+              ________
+ ERICA1_1      13.573
+ ERICA2_1      11.148
+ ERICA3_1      14.554
+ ERICA4_1      15.254
+ ERICA5_1      17.997
+ ERICA6_1      15.265
+ ERICA7_1      12.769
+ ERICA8_1      20.371
+ ERICA9_1      27.190
+ ERICA10_       8.028
+ ERICA11_       1.921
+ ERICA12_      12.531
+ ERICA13_      -0.937
+ ERICA14_       0.698
+ ERICA15_      -5.140
+ ERICA16_       1.485
+ ERICA17_       5.422
+
+
+           Est./S.E. GEOMIN FACTOR CORRELATIONS
+                  1
+              ________
+      1         0.000
+
+
+           Est./S.E. ESTIMATED RESIDUAL VARIANCES
+              ERICA1_1      ERICA2_1      ERICA3_1      ERICA4_1      ERICA5_1
+              ________      ________      ________      ________      ________
+               12.716        14.685        13.027        10.787        11.106
+
+
+           Est./S.E. ESTIMATED RESIDUAL VARIANCES
+              ERICA6_1      ERICA7_1      ERICA8_1      ERICA9_1      ERICA10_
+              ________      ________      ________      ________      ________
+               10.978        14.145         9.995         7.948        16.646
+
+
+           Est./S.E. ESTIMATED RESIDUAL VARIANCES
+              ERICA11_      ERICA12_      ERICA13_      ERICA14_      ERICA15_
+              ________      ________      ________      ________      ________
+               78.684        14.468       135.978       181.046        29.565
+
+
+           Est./S.E. ESTIMATED RESIDUAL VARIANCES
+              ERICA16_      ERICA17_
+              ________      ________
+               72.760        17.969
+
+
+EXPLORATORY FACTOR ANALYSIS WITH 2 FACTOR(S):
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                       33
+
+Chi-Square Test of Model Fit
+
+          Value                            226.523*
+          Degrees of Freedom                   103
+          P-Value                           0.0000
+
+*   The chi-square value for MLM, MLMV, MLR, ULSMV, WLSM and WLSMV cannot be used
+    for chi-square difference testing in the regular way.  MLM, MLR and WLSM
+    chi-square difference testing is described on the Mplus website.  MLMV, WLSMV,
+    and ULSMV difference testing is done using the DIFFTEST option.
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.067
+          90 Percent C.I.                    0.055  0.079
+          Probability RMSEA <= .05           0.011
+
+CFI/TLI
+
+          CFI                                0.937
+          TLI                                0.917
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                           2090.306
+          Degrees of Freedom                   136
+          P-Value                           0.0000
+
+SRMR (Standardized Root Mean Square Residual)
+
+          Value                              0.058
+
+
+
+MINIMUM ROTATION FUNCTION VALUE       1.30337
+
+
+
+           GEOMIN ROTATED LOADINGS (* significant at 5% level)
+                  1             2
+              ________      ________
+ ERICA1_1       0.600*       -0.234*
+ ERICA2_1       0.545*       -0.332*
+ ERICA3_1       0.606*       -0.157*
+ ERICA4_1       0.639*        0.103
+ ERICA5_1       0.673*       -0.113
+ ERICA6_1       0.639*        0.020
+ ERICA7_1       0.558*       -0.022
+ ERICA8_1       0.707*        0.081
+ ERICA9_1       0.789*        0.112
+ ERICA10_       0.431*        0.457*
+ ERICA11_       0.091         0.406*
+ ERICA12_       0.551*       -0.038
+ ERICA13_      -0.093         0.481*
+ ERICA14_      -0.009         0.775*
+ ERICA15_      -0.303*        0.287*
+ ERICA16_       0.066         0.656*
+ ERICA17_       0.346*        0.370*
+
+
+           GEOMIN FACTOR CORRELATIONS (* significant at 5% level)
+                  1             2
+              ________      ________
+      1         1.000
+      2         0.040         1.000
+
+
+           ESTIMATED RESIDUAL VARIANCES
+              ERICA1_1      ERICA2_1      ERICA3_1      ERICA4_1      ERICA5_1
+              ________      ________      ________      ________      ________
+                0.597         0.607         0.616         0.576         0.540
+
+
+           ESTIMATED RESIDUAL VARIANCES
+              ERICA6_1      ERICA7_1      ERICA8_1      ERICA9_1      ERICA10_
+              ________      ________      ________      ________      ________
+                0.591         0.690         0.489         0.358         0.590
+
+
+           ESTIMATED RESIDUAL VARIANCES
+              ERICA11_      ERICA12_      ERICA13_      ERICA14_      ERICA15_
+              ________      ________      ________      ________      ________
+                0.824         0.697         0.764         0.401         0.832
+
+
+           ESTIMATED RESIDUAL VARIANCES
+              ERICA16_      ERICA17_
+              ________      ________
+                0.562         0.733
+
+
+           S.E. GEOMIN ROTATED LOADINGS
+                  1             2
+              ________      ________
+ ERICA1_1       0.047         0.074
+ ERICA2_1       0.053         0.069
+ ERICA3_1       0.042         0.077
+ ERICA4_1       0.043         0.074
+ ERICA5_1       0.037         0.074
+ ERICA6_1       0.042         0.052
+ ERICA7_1       0.044         0.067
+ ERICA8_1       0.036         0.077
+ ERICA9_1       0.031         0.082
+ ERICA10_       0.059         0.072
+ ERICA11_       0.060         0.061
+ ERICA12_       0.044         0.068
+ ERICA13_       0.068         0.058
+ ERICA14_       0.012         0.049
+ ERICA15_       0.054         0.060
+ ERICA16_       0.059         0.058
+ ERICA17_       0.066         0.066
+
+
+           S.E. GEOMIN FACTOR CORRELATIONS
+                  1             2
+              ________      ________
+      1         0.000
+      2         0.063         0.000
+
+
+           S.E. ESTIMATED RESIDUAL VARIANCES
+              ERICA1_1      ERICA2_1      ERICA3_1      ERICA4_1      ERICA5_1
+              ________      ________      ________      ________      ________
+                0.055         0.056         0.051         0.055         0.051
+
+
+           S.E. ESTIMATED RESIDUAL VARIANCES
+              ERICA6_1      ERICA7_1      ERICA8_1      ERICA9_1      ERICA10_
+              ________      ________      ________      ________      ________
+                0.053         0.049         0.049         0.044         0.065
+
+
+           S.E. ESTIMATED RESIDUAL VARIANCES
+              ERICA11_      ERICA12_      ERICA13_      ERICA14_      ERICA15_
+              ________      ________      ________      ________      ________
+                0.049         0.049         0.057         0.076         0.044
+
+
+           S.E. ESTIMATED RESIDUAL VARIANCES
+              ERICA16_      ERICA17_
+              ________      ________
+                0.076         0.062
+
+
+           Est./S.E. GEOMIN ROTATED LOADINGS
+                  1             2
+              ________      ________
+ ERICA1_1      12.814        -3.165
+ ERICA2_1      10.343        -4.795
+ ERICA3_1      14.318        -2.026
+ ERICA4_1      14.829         1.388
+ ERICA5_1      18.259        -1.528
+ ERICA6_1      15.118         0.380
+ ERICA7_1      12.731        -0.335
+ ERICA8_1      19.519         1.048
+ ERICA9_1      25.122         1.370
+ ERICA10_       7.247         6.371
+ ERICA11_       1.513         6.709
+ ERICA12_      12.511        -0.561
+ ERICA13_      -1.377         8.264
+ ERICA14_      -0.762        15.843
+ ERICA15_      -5.600         4.753
+ ERICA16_       1.122        11.314
+ ERICA17_       5.260         5.592
+
+
+           Est./S.E. GEOMIN FACTOR CORRELATIONS
+                  1             2
+              ________      ________
+      1         0.000
+      2         0.629         0.000
+
+
+           Est./S.E. ESTIMATED RESIDUAL VARIANCES
+              ERICA1_1      ERICA2_1      ERICA3_1      ERICA4_1      ERICA5_1
+              ________      ________      ________      ________      ________
+               10.788        10.913        12.128        10.490        10.693
+
+
+           Est./S.E. ESTIMATED RESIDUAL VARIANCES
+              ERICA6_1      ERICA7_1      ERICA8_1      ERICA9_1      ERICA10_
+              ________      ________      ________      ________      ________
+               11.044        14.123        10.025         8.069         9.150
+
+
+           Est./S.E. ESTIMATED RESIDUAL VARIANCES
+              ERICA11_      ERICA12_      ERICA13_      ERICA14_      ERICA15_
+              ________      ________      ________      ________      ________
+               16.650        14.351        13.378         5.285        18.992
+
+
+           Est./S.E. ESTIMATED RESIDUAL VARIANCES
+              ERICA16_      ERICA17_
+              ________      ________
+                7.423        11.789
+
+
+           FACTOR STRUCTURE
+                  1             2
+              ________      ________
+ ERICA1_1       0.591        -0.210
+ ERICA2_1       0.531        -0.311
+ ERICA3_1       0.600        -0.133
+ ERICA4_1       0.643         0.128
+ ERICA5_1       0.669        -0.086
+ ERICA6_1       0.639         0.045
+ ERICA7_1       0.557         0.000
+ ERICA8_1       0.710         0.109
+ ERICA9_1       0.793         0.143
+ ERICA10_       0.449         0.474
+ ERICA11_       0.107         0.410
+ ERICA12_       0.550        -0.016
+ ERICA13_      -0.074         0.477
+ ERICA14_       0.022         0.774
+ ERICA15_      -0.292         0.275
+ ERICA16_       0.092         0.658
+ ERICA17_       0.360         0.384
+
+
+EXPLORATORY FACTOR ANALYSIS WITH 3 FACTOR(S):
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                       48
+
+Chi-Square Test of Model Fit
+
+          Value                            140.861*
+          Degrees of Freedom                    88
+          P-Value                           0.0003
+
+*   The chi-square value for MLM, MLMV, MLR, ULSMV, WLSM and WLSMV cannot be used
+    for chi-square difference testing in the regular way.  MLM, MLR and WLSM
+    chi-square difference testing is described on the Mplus website.  MLMV, WLSMV,
+    and ULSMV difference testing is done using the DIFFTEST option.
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.047
+          90 Percent C.I.                    0.032  0.061
+          Probability RMSEA <= .05           0.607
+
+CFI/TLI
+
+          CFI                                0.973
+          TLI                                0.958
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                           2090.306
+          Degrees of Freedom                   136
+          P-Value                           0.0000
+
+SRMR (Standardized Root Mean Square Residual)
+
+          Value                              0.045
+
+
+
+MINIMUM ROTATION FUNCTION VALUE       0.63449
+
+
+
+           GEOMIN ROTATED LOADINGS (* significant at 5% level)
+                  1             2             3
+              ________      ________      ________
+ ERICA1_1       0.552*       -0.006        -0.329*
+ ERICA2_1       0.428         0.051        -0.399*
+ ERICA3_1       0.236         0.514*       -0.091
+ ERICA4_1       0.581*        0.164         0.047
+ ERICA5_1       0.190         0.770*       -0.003
+ ERICA6_1       0.531*        0.204        -0.025
+ ERICA7_1       0.344         0.346*       -0.006
+ ERICA8_1       0.621*        0.200         0.024
+ ERICA9_1       0.847*        0.008        -0.020
+ ERICA10_       0.582*       -0.012         0.389*
+ ERICA11_       0.256        -0.071         0.373*
+ ERICA12_       0.549*        0.005        -0.125
+ ERICA13_       0.107        -0.101         0.472*
+ ERICA14_       0.004         0.337         0.852*
+ ERICA15_      -0.263         0.053         0.345*
+ ERICA16_      -0.012         0.422*        0.748*
+ ERICA17_       0.266         0.307         0.391*
+
+
+           GEOMIN FACTOR CORRELATIONS (* significant at 5% level)
+                  1             2             3
+              ________      ________      ________
+      1         1.000
+      2         0.362         1.000
+      3        -0.057        -0.376*        1.000
+
+
+           ESTIMATED RESIDUAL VARIANCES
+              ERICA1_1      ERICA2_1      ERICA3_1      ERICA4_1      ERICA5_1
+              ________      ________      ________      ________      ________
+                0.571         0.604         0.546         0.573         0.263
+
+
+           ESTIMATED RESIDUAL VARIANCES
+              ERICA6_1      ERICA7_1      ERICA8_1      ERICA9_1      ERICA10_
+              ________      ________      ________      ________      ________
+                0.592         0.674         0.490         0.275         0.537
+
+
+           ESTIMATED RESIDUAL VARIANCES
+              ERICA11_      ERICA12_      ERICA13_      ERICA14_      ERICA15_
+              ________      ________      ________      ________      ________
+                0.795         0.673         0.733         0.377         0.823
+
+
+           ESTIMATED RESIDUAL VARIANCES
+              ERICA16_      ERICA17_
+              ________      ________
+                0.502         0.725
+
+
+           S.E. GEOMIN ROTATED LOADINGS
+                  1             2             3
+              ________      ________      ________
+ ERICA1_1       0.168         0.033         0.091
+ ERICA2_1       0.263         0.088         0.093
+ ERICA3_1       0.602         0.223         0.076
+ ERICA4_1       0.180         0.135         0.067
+ ERICA5_1       0.828         0.332         0.022
+ ERICA6_1       0.259         0.149         0.065
+ ERICA7_1       0.378         0.164         0.058
+ ERICA8_1       0.228         0.146         0.070
+ ERICA9_1       0.060         0.089         0.089
+ ERICA10_       0.194         0.050         0.076
+ ERICA11_       0.238         0.095         0.068
+ ERICA12_       0.086         0.069         0.086
+ ERICA13_       0.311         0.100         0.074
+ ERICA14_       0.034         0.239         0.081
+ ERICA15_       0.137         0.094         0.070
+ ERICA16_       0.045         0.200         0.081
+ ERICA17_       0.170         0.202         0.071
+
+
+           S.E. GEOMIN FACTOR CORRELATIONS
+                  1             2             3
+              ________      ________      ________
+      1         0.000
+      2         0.815         0.000
+      3         0.386         0.185         0.000
+
+
+           S.E. ESTIMATED RESIDUAL VARIANCES
+              ERICA1_1      ERICA2_1      ERICA3_1      ERICA4_1      ERICA5_1
+              ________      ________      ________      ________      ________
+                0.058         0.056         0.059         0.055         0.089
+
+
+           S.E. ESTIMATED RESIDUAL VARIANCES
+              ERICA6_1      ERICA7_1      ERICA8_1      ERICA9_1      ERICA10_
+              ________      ________      ________      ________      ________
+                0.054         0.050         0.049         0.049         0.071
+
+
+           S.E. ESTIMATED RESIDUAL VARIANCES
+              ERICA11_      ERICA12_      ERICA13_      ERICA14_      ERICA15_
+              ________      ________      ________      ________      ________
+                0.056         0.050         0.064         0.072         0.045
+
+
+           S.E. ESTIMATED RESIDUAL VARIANCES
+              ERICA16_      ERICA17_
+              ________      ________
+                0.079         0.062
+
+
+           Est./S.E. GEOMIN ROTATED LOADINGS
+                  1             2             3
+              ________      ________      ________
+ ERICA1_1       3.288        -0.194        -3.594
+ ERICA2_1       1.628         0.577        -4.301
+ ERICA3_1       0.392         2.304        -1.198
+ ERICA4_1       3.227         1.217         0.694
+ ERICA5_1       0.229         2.319        -0.134
+ ERICA6_1       2.054         1.365        -0.389
+ ERICA7_1       0.911         2.115        -0.107
+ ERICA8_1       2.721         1.373         0.342
+ ERICA9_1      14.010         0.094        -0.222
+ ERICA10_       3.009        -0.237         5.120
+ ERICA11_       1.079        -0.750         5.501
+ ERICA12_       6.400         0.067        -1.458
+ ERICA13_       0.345        -1.017         6.382
+ ERICA14_       0.106         1.409        10.472
+ ERICA15_      -1.923         0.568         4.908
+ ERICA16_      -0.275         2.106         9.272
+ ERICA17_       1.569         1.525         5.491
+
+
+           Est./S.E. GEOMIN FACTOR CORRELATIONS
+                  1             2             3
+              ________      ________      ________
+      1         0.000
+      2         0.444         0.000
+      3        -0.148        -2.033         0.000
+
+
+           Est./S.E. ESTIMATED RESIDUAL VARIANCES
+              ERICA1_1      ERICA2_1      ERICA3_1      ERICA4_1      ERICA5_1
+              ________      ________      ________      ________      ________
+                9.874        10.737         9.287        10.334         2.949
+
+
+           Est./S.E. ESTIMATED RESIDUAL VARIANCES
+              ERICA6_1      ERICA7_1      ERICA8_1      ERICA9_1      ERICA10_
+              ________      ________      ________      ________      ________
+               10.997        13.494         9.998         5.614         7.563
+
+
+           Est./S.E. ESTIMATED RESIDUAL VARIANCES
+              ERICA11_      ERICA12_      ERICA13_      ERICA14_      ERICA15_
+              ________      ________      ________      ________      ________
+               14.158        13.394        11.513         5.207        18.152
+
+
+           Est./S.E. ESTIMATED RESIDUAL VARIANCES
+              ERICA16_      ERICA17_
+              ________      ________
+                6.375        11.673
+
+
+           FACTOR STRUCTURE
+                  1             2             3
+              ________      ________      ________
+ ERICA1_1       0.568         0.317        -0.358
+ ERICA2_1       0.469         0.356        -0.443
+ ERICA3_1       0.427         0.634        -0.298
+ ERICA4_1       0.638         0.357        -0.048
+ ERICA5_1       0.468         0.840        -0.304
+ ERICA6_1       0.607         0.406        -0.132
+ ERICA7_1       0.470         0.473        -0.156
+ ERICA8_1       0.692         0.415        -0.087
+ ERICA9_1       0.851         0.322        -0.071
+ ERICA10_       0.556         0.052         0.360
+ ERICA11_       0.209        -0.118         0.385
+ ERICA12_       0.558         0.250        -0.158
+ ERICA13_       0.044        -0.240         0.504
+ ERICA14_       0.077         0.018         0.725
+ ERICA15_      -0.263        -0.172         0.340
+ ERICA16_       0.097         0.136         0.590
+ ERICA17_       0.355         0.256         0.261
+
+
+MODIFICATION INDICES
+
+
+     MODIFICATION INDICES FOR ANALYSIS WITH 1 FACTOR(S)
+
+
+
+     MODIFICATION INDICES
+
+
+           THETA
+              ERICA1_1      ERICA2_1      ERICA3_1      ERICA4_1      ERICA5_1
+              ________      ________      ________      ________      ________
+ ERICA1_1       0.000
+ ERICA2_1      25.864         0.000
+ ERICA3_1       0.874         0.408         0.000
+ ERICA4_1       0.928         0.090         1.691         0.000
+ ERICA5_1       1.668         0.049        33.097         0.089         0.000
+ ERICA6_1       0.147         0.028         2.382         0.018         0.303
+ ERICA7_1       0.107         1.009         0.012         0.029         8.408
+ ERICA8_1       2.681         1.509         1.573         0.011         1.447
+ ERICA9_1       0.016         0.967         5.969         2.247         9.622
+ ERICA10_       0.775         7.667         2.981         0.039         2.783
+ ERICA11_       3.316         3.697         4.796         1.492         3.653
+ ERICA12_       1.181         0.298         4.174         0.822         1.313
+ ERICA13_       2.490        11.905         0.727         2.260         2.382
+ ERICA14_       8.755        13.910         0.134         2.436         1.671
+ ERICA15_       1.170         0.750         3.019         0.538         0.010
+ ERICA16_       4.749         9.047         1.068         0.024         0.810
+ ERICA17_       0.514         1.316         1.970         0.030         0.007
+
+
+           THETA
+              ERICA6_1      ERICA7_1      ERICA8_1      ERICA9_1      ERICA10_
+              ________      ________      ________      ________      ________
+ ERICA6_1       0.000
+ ERICA7_1       0.535         0.000
+ ERICA8_1       2.803         1.178         0.000
+ ERICA9_1       0.074         0.465         0.185         0.000
+ ERICA10_       0.701         0.679         1.625        10.952         0.000
+ ERICA11_       0.115         0.093         3.579         1.032        21.491
+ ERICA12_       0.066         0.917         0.489         2.973         0.061
+ ERICA13_       3.404         1.601         1.080         0.776        33.250
+ ERICA14_       0.817         0.634         0.397         0.010        23.276
+ ERICA15_       0.178         0.103         0.166         0.075         1.211
+ ERICA16_       0.288         1.591         0.391         0.123         8.781
+ ERICA17_       5.230         0.532         1.227         0.830         3.712
+
+
+           THETA
+              ERICA11_      ERICA12_      ERICA13_      ERICA14_      ERICA15_
+              ________      ________      ________      ________      ________
+ ERICA11_       0.000
+ ERICA12_       1.175         0.000
+ ERICA13_      20.472         0.593         0.000
+ ERICA14_      14.004         1.468        35.049         0.000
+ ERICA15_       4.106         0.132         1.620        21.273         0.000
+ ERICA16_       9.197         0.027        14.612       136.355         9.577
+ ERICA17_       1.466         0.001         2.398        34.017        13.531
+
+
+           THETA
+              ERICA16_      ERICA17_
+              ________      ________
+ ERICA16_       0.000
+ ERICA17_      15.284         0.000
+
+
+     EXPECTED PARAMETER CHANGE
+
+
+           THETA
+              ERICA1_1      ERICA2_1      ERICA3_1      ERICA4_1      ERICA5_1
+              ________      ________      ________      ________      ________
+ ERICA1_1       0.000
+ ERICA2_1       0.261         0.000
+ ERICA3_1      -0.062         0.042         0.000
+ ERICA4_1      -0.062        -0.018        -0.084         0.000
+ ERICA5_1      -0.081        -0.014         0.281        -0.018         0.000
+ ERICA6_1       0.025        -0.011        -0.107        -0.008        -0.032
+ ERICA7_1      -0.020        -0.063        -0.007         0.010         0.145
+ ERICA8_1      -0.103        -0.076         0.074         0.006        -0.068
+ ERICA9_1      -0.008        -0.061        -0.163         0.086        -0.180
+ ERICA10_      -0.060        -0.190        -0.109        -0.013        -0.118
+ ERICA11_      -0.114        -0.114        -0.140         0.072        -0.118
+ ERICA12_       0.062         0.032        -0.132         0.055        -0.072
+ ERICA13_      -0.104        -0.219        -0.061         0.105        -0.107
+ ERICA14_      -0.197        -0.244        -0.027         0.106        -0.098
+ ERICA15_      -0.072        -0.055        -0.110         0.048         0.006
+ ERICA16_      -0.160        -0.226        -0.081        -0.011         0.065
+ ERICA17_      -0.056        -0.084        -0.102        -0.013         0.006
+
+
+           THETA
+              ERICA6_1      ERICA7_1      ERICA8_1      ERICA9_1      ERICA10_
+              ________      ________      ________      ________      ________
+ ERICA6_1       0.000
+ ERICA7_1      -0.045         0.000
+ ERICA8_1       0.096        -0.065         0.000
+ ERICA9_1      -0.017         0.039         0.023         0.000
+ ERICA10_      -0.057        -0.055         0.080         0.187         0.000
+ ERICA11_       0.021        -0.019         0.107         0.061         0.268
+ ERICA12_      -0.016        -0.057        -0.040         0.096         0.016
+ ERICA13_      -0.119        -0.080         0.072         0.061         0.322
+ ERICA14_       0.065        -0.058        -0.046        -0.007         0.311
+ ERICA15_      -0.028         0.020        -0.027        -0.018         0.067
+ ERICA16_      -0.042         0.091        -0.049         0.028         0.220
+ ERICA17_       0.157        -0.057         0.079        -0.068         0.139
+
+
+           THETA
+              ERICA11_      ERICA12_      ERICA13_      ERICA14_      ERICA15_
+              ________      ________      ________      ________      ________
+ ERICA11_       0.000
+ ERICA12_      -0.065         0.000
+ ERICA13_       0.266        -0.050         0.000
+ ERICA14_       0.245        -0.079         0.331         0.000
+ ERICA15_       0.114        -0.023         0.079         0.276         0.000
+ ERICA16_       0.213        -0.012         0.266         0.583         0.215
+ ERICA17_       0.081         0.002         0.114         0.338         0.267
+
+
+           THETA
+              ERICA16_      ERICA17_
+              ________      ________
+ ERICA16_       0.000
+ ERICA17_       0.268         0.000
+
+
+     MODIFICATION INDICES FOR ANALYSIS WITH 2 FACTOR(S)
+
+
+
+     MODIFICATION INDICES
+
+
+           THETA
+              ERICA1_1      ERICA2_1      ERICA3_1      ERICA4_1      ERICA5_1
+              ________      ________      ________      ________      ________
+ ERICA1_1       0.000
+ ERICA2_1      15.849         0.000
+ ERICA3_1       3.809         0.177         0.000
+ ERICA4_1       0.388         0.128         1.450         0.000
+ ERICA5_1       4.875         1.519        40.338         0.003         0.000
+ ERICA6_1       0.319         0.021         3.173         0.035         0.326
+ ERICA7_1       0.261         2.171         0.043         0.079        11.612
+ ERICA8_1       2.350         0.933         3.320         0.005         1.331
+ ERICA9_1       0.307         0.144         6.399         2.190        10.931
+ ERICA10_       1.039         0.349         0.461         1.899         1.338
+ ERICA11_       0.042         0.442         1.871         0.343         1.759
+ ERICA12_       1.169         0.076         6.644         1.387         2.110
+ ERICA13_       0.305         0.659         0.272         1.227         0.424
+ ERICA14_       0.107         1.043         5.222         0.485         0.059
+ ERICA15_       0.022         1.219         1.083         0.153         0.906
+ ERICA16_       0.047         0.033         0.355         2.002         7.937
+ ERICA17_       0.383         0.645         0.387         0.831         0.937
+
+
+           THETA
+              ERICA6_1      ERICA7_1      ERICA8_1      ERICA9_1      ERICA10_
+              ________      ________      ________      ________      ________
+ ERICA6_1       0.000
+ ERICA7_1       0.689         0.000
+ ERICA8_1       3.889         1.495         0.000
+ ERICA9_1       0.119         0.848         0.052         0.000
+ ERICA10_       1.795         0.825         0.359         6.450         0.000
+ ERICA11_       0.081         0.024         2.519         0.043         2.998
+ ERICA12_       0.075         1.302         0.549         4.842         0.364
+ ERICA13_       5.420         1.400         0.544         0.051         5.915
+ ERICA14_       1.500         0.244         3.463         2.723         1.625
+ ERICA15_       0.262         0.408         0.715         0.804         1.940
+ ERICA16_       0.683         4.149         2.806         0.655         2.876
+ ERICA17_       7.211         0.529         0.611         3.657         0.648
+
+
+           THETA
+              ERICA11_      ERICA12_      ERICA13_      ERICA14_      ERICA15_
+              ________      ________      ________      ________      ________
+ ERICA11_       0.000
+ ERICA12_       0.945         0.000
+ ERICA13_       2.718         0.169         0.000
+ ERICA14_       2.523         0.542         1.730         0.000
+ ERICA15_       0.013         0.010         1.991         1.126         0.000
+ ERICA16_       1.115         0.113         0.993        11.578         0.174
+ ERICA17_       1.908         0.095         1.189         1.845         7.409
+
+
+           THETA
+              ERICA16_      ERICA17_
+              ________      ________
+ ERICA16_       0.000
+ ERICA17_       0.173         0.000
+
+
+     EXPECTED PARAMETER CHANGE
+
+
+           THETA
+              ERICA1_1      ERICA2_1      ERICA3_1      ERICA4_1      ERICA5_1
+              ________      ________      ________      ________      ________
+ ERICA1_1       0.000
+ ERICA2_1       0.191         0.000
+ ERICA3_1      -0.112        -0.025         0.000
+ ERICA4_1      -0.034         0.019        -0.066         0.000
+ ERICA5_1      -0.119        -0.070         0.270        -0.003         0.000
+ ERICA6_1       0.032        -0.008        -0.105        -0.010        -0.028
+ ERICA7_1      -0.027        -0.081        -0.011         0.014         0.145
+ ERICA8_1      -0.083        -0.052         0.092        -0.004        -0.056
+ ERICA9_1       0.029        -0.021        -0.144         0.072        -0.164
+ ERICA10_       0.062        -0.037        -0.039        -0.083        -0.073
+ ERICA11_      -0.012         0.037        -0.078         0.031        -0.073
+ ERICA12_       0.053         0.014        -0.142         0.061        -0.077
+ ERICA13_       0.033        -0.049         0.034         0.069        -0.041
+ ERICA14_       0.022         0.072         0.165         0.047         0.018
+ ERICA15_       0.009         0.063        -0.058         0.022         0.053
+ ERICA16_       0.015         0.013         0.043        -0.097         0.193
+ ERICA17_       0.042         0.053        -0.040        -0.058         0.060
+
+
+           THETA
+              ERICA6_1      ERICA7_1      ERICA8_1      ERICA9_1      ERICA10_
+              ________      ________      ________      ________      ________
+ ERICA6_1       0.000
+ ERICA7_1      -0.043         0.000
+ ERICA8_1       0.095        -0.062         0.000
+ ERICA9_1      -0.018         0.045         0.011         0.000
+ ERICA10_      -0.082        -0.055         0.034         0.135         0.000
+ ERICA11_       0.016        -0.009         0.081         0.011         0.097
+ ERICA12_      -0.015        -0.057        -0.036         0.104         0.034
+ ERICA13_      -0.135        -0.067         0.046         0.014         0.137
+ ERICA14_       0.086        -0.035        -0.132        -0.118        -0.094
+ ERICA15_      -0.029         0.034        -0.049        -0.050        -0.079
+ ERICA16_      -0.059         0.136        -0.121        -0.059        -0.127
+ ERICA17_       0.161        -0.049         0.049        -0.124        -0.054
+
+
+           THETA
+              ERICA11_      ERICA12_      ERICA13_      ERICA14_      ERICA15_
+              ________      ________      ________      ________      ________
+ ERICA11_       0.000
+ ERICA12_      -0.051         0.000
+ ERICA13_       0.093        -0.024         0.000
+ ERICA14_      -0.112        -0.048        -0.091         0.000
+ ERICA15_      -0.006        -0.005        -0.081         0.068         0.000
+ ERICA16_      -0.073         0.023        -0.071         0.271         0.028
+ ERICA17_      -0.085         0.019        -0.073         0.092         0.174
+
+
+           THETA
+              ERICA16_      ERICA17_
+              ________      ________
+ ERICA16_       0.000
+ ERICA17_       0.029         0.000
+
+
+     MODIFICATION INDICES FOR ANALYSIS WITH 3 FACTOR(S)
+
+
+
+     MODIFICATION INDICES
+
+
+           THETA
+              ERICA1_1      ERICA2_1      ERICA3_1      ERICA4_1      ERICA5_1
+              ________      ________      ________      ________      ________
+ ERICA1_1       0.000
+ ERICA2_1      16.320         0.000
+ ERICA3_1       0.534         0.176         0.000
+ ERICA4_1       0.853         0.092         0.337         0.000
+ ERICA5_1       0.691         0.688         4.607         0.507         0.000
+ ERICA6_1       0.310         0.024         2.685         0.039         0.941
+ ERICA7_1       0.012         1.489         1.281         0.411         2.627
+ ERICA8_1       3.453         1.162         8.768         0.013         1.222
+ ERICA9_1       0.875         1.416         0.507         0.870         0.044
+ ERICA10_       0.206         0.775         1.552         3.437         1.916
+ ERICA11_       0.547         0.270         0.188         0.153         0.445
+ ERICA12_       0.255         0.001         2.231         1.134         0.079
+ ERICA13_       0.053         0.981         2.296         1.065         1.602
+ ERICA14_       1.299         1.996         1.001         1.141         5.955
+ ERICA15_       0.280         1.812         4.670         0.334         0.000
+ ERICA16_       1.484         0.355         1.364         1.285         0.017
+ ERICA17_       1.023         1.035         2.148         0.628         0.247
+
+
+           THETA
+              ERICA6_1      ERICA7_1      ERICA8_1      ERICA9_1      ERICA10_
+              ________      ________      ________      ________      ________
+ ERICA6_1       0.000
+ ERICA7_1       0.574         0.000
+ ERICA8_1       4.591         1.053         0.000
+ ERICA9_1       0.522         4.916         0.282         0.000
+ ERICA10_       2.248         0.067         0.191         0.899         0.000
+ ERICA11_       0.083         0.119         2.383         0.761         0.782
+ ERICA12_       0.103         0.316         0.945         1.054         0.013
+ ERICA13_       6.280         0.714         0.473         0.229         2.845
+ ERICA14_       1.990         1.650         3.276         0.317         0.126
+ ERICA15_       0.250         0.083         0.623         0.049         1.192
+ ERICA16_       0.591         1.987         2.285         0.507         0.459
+ ERICA17_       8.747         1.209         1.030         2.262         0.122
+
+
+           THETA
+              ERICA11_      ERICA12_      ERICA13_      ERICA14_      ERICA15_
+              ________      ________      ________      ________      ________
+ ERICA11_       0.000
+ ERICA12_       2.740         0.000
+ ERICA13_       1.260         0.794         0.000
+ ERICA14_       1.055         0.001         0.503         0.000
+ ERICA15_       0.050         0.077         1.710         0.561         0.000
+ ERICA16_       0.077         1.800         0.129         4.650         0.005
+ ERICA17_       1.230         0.558         0.775         1.061         7.561
+
+
+           THETA
+              ERICA16_      ERICA17_
+              ________      ________
+ ERICA16_       0.000
+ ERICA17_       0.008         0.000
+
+
+     EXPECTED PARAMETER CHANGE
+
+
+           THETA
+              ERICA1_1      ERICA2_1      ERICA3_1      ERICA4_1      ERICA5_1
+              ________      ________      ________      ________      ________
+ ERICA1_1       0.000
+ ERICA2_1       0.190         0.000
+ ERICA3_1      -0.043         0.025         0.000
+ ERICA4_1      -0.049         0.015        -0.032         0.000
+ ERICA5_1      -0.057        -0.059         0.235         0.047         0.000
+ ERICA6_1       0.030        -0.008        -0.097        -0.009        -0.065
+ ERICA7_1       0.006        -0.065        -0.066         0.030         0.118
+ ERICA8_1      -0.097        -0.055         0.152        -0.006        -0.069
+ ERICA9_1      -0.053        -0.066        -0.043         0.048        -0.015
+ ERICA10_       0.028        -0.054         0.079        -0.110         0.115
+ ERICA11_      -0.041         0.028        -0.026         0.020         0.050
+ ERICA12_       0.025         0.001        -0.085         0.053         0.019
+ ERICA13_       0.013        -0.057         0.103         0.061         0.105
+ ERICA14_       0.079         0.098         0.075         0.070        -0.228
+ ERICA15_       0.030         0.073        -0.122         0.031        -0.001
+ ERICA16_       0.086         0.043        -0.091        -0.076         0.013
+ ERICA17_       0.066         0.063        -0.096        -0.048        -0.040
+
+
+           THETA
+              ERICA6_1      ERICA7_1      ERICA8_1      ERICA9_1      ERICA10_
+              ________      ________      ________      ________      ________
+ ERICA6_1       0.000
+ ERICA7_1      -0.038         0.000
+ ERICA8_1       0.098        -0.050         0.000
+ ERICA9_1      -0.038         0.111        -0.026         0.000
+ ERICA10_      -0.089        -0.015         0.025         0.059         0.000
+ ERICA11_       0.015         0.019         0.076        -0.049         0.052
+ ERICA12_      -0.016        -0.028        -0.046         0.054        -0.007
+ ERICA13_      -0.139        -0.047         0.041        -0.030         0.101
+ ERICA14_       0.095        -0.089        -0.124        -0.041        -0.026
+ ERICA15_      -0.027         0.015        -0.043        -0.013        -0.061
+ ERICA16_      -0.054         0.095        -0.107         0.054        -0.051
+ ERICA17_       0.168        -0.071         0.060        -0.098        -0.023
+
+
+           THETA
+              ERICA11_      ERICA12_      ERICA13_      ERICA14_      ERICA15_
+              ________      ________      ________      ________      ________
+ ERICA11_       0.000
+ ERICA12_      -0.086         0.000
+ ERICA13_       0.064        -0.050         0.000
+ ERICA14_      -0.071        -0.001        -0.048         0.000
+ ERICA15_       0.011         0.014        -0.072         0.048         0.000
+ ERICA16_      -0.019         0.092        -0.025         0.202        -0.005
+ ERICA17_      -0.066         0.045        -0.057         0.071         0.167
+
+
+           THETA
+              ERICA16_      ERICA17_
+              ________      ________
+ ERICA16_       0.000
+ ERICA17_      -0.006         0.000
+
+
+     Beginning Time:  16:11:56
+        Ending Time:  16:11:57
+       Elapsed Time:  00:00:01
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2019 Muthen & Muthen

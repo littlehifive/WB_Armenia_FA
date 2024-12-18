@@ -1,0 +1,397 @@
+---
+title: "Armenia Measurement Analysis"
+author: "Michael Wu"
+date: "2024-12-07"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(MplusAutomation)
+library(tidyverse)
+#devtools::install_github("nyuglobalties/mrautomatr")
+library(mrautomatr)
+```
+
+# WAVE 1 (PILOT)
+## Students
+
+```{r}
+nrow(dat_stu_b)
+table(dat_stu_b$age)
+prop.table(table(dat_stu_b$gender))
+table(dat_stu_b$grade)
+table(dat_stu_b$country)
+```
+
+### DASS Time 1
+```{r}
+runModels(
+  "Mplus/wave1/dass_student_1/dass1_student_cfa.inp",
+  recursive=TRUE)
+```
+
+```{r}
+render_report(output_dir = "/Users/michaelfive/Library/CloudStorage/GoogleDrive-wuzezhen33@gmail.com/My Drive/WB Armenia Study/Reports/wave1/auto-generated",
+               output_file = "Report_dass_student_baseline.docx",
+               parameters = list(
+                 # set R code print options
+                 printcode = FALSE,
+                 printwarning = FALSE,
+                 storecache = FALSE,
+
+                 # set report overall parameters
+                 template = here::here("Mplus/wave1/dass_student_1/input_dass_student_1.xlsx"),
+                 set_title = "Measurement Report - DASS Baseline (Student)",
+                 set_author = "Zezhen Wu",
+
+                 # select report sections
+                 item = TRUE,
+                 descriptive = TRUE,
+                 ds_plot = TRUE,
+                 correlation_matrix_lg = FALSE,
+                 correlation_matrix_bivar = FALSE,
+                 correlation_matrix_item = TRUE, # BE CAREFUL! This might crash the document.
+                 efa_screeplot = TRUE,
+                 cfa_model_fit = TRUE,
+                 cfa_model_plot = TRUE,
+                 cfa_model_parameters = TRUE,
+                 cfa_model_thresholds = FALSE, # default is to mute the thresholds as the table can get very long
+                 cfa_r2 = FALSE,
+                 internal_reliability = TRUE,
+                 summary_item_statistics = TRUE,
+                 item_total_statistics = TRUE,
+                 inv_tx = TRUE,
+                 inv_gender = TRUE,
+                 inv_age = TRUE,
+                 inv_lg = TRUE)
+                 )
+
+get.omega.bywave(model = "dass1_student_cfa.out",
+                 path = here::here("Mplus/wave1/dass_student_1"))
+```
+
+### GAD Time 1
+```{r}
+runModels(
+  "Mplus/wave1/gad_student_1/gad1_student_cfa.inp",
+  recursive=TRUE)
+```
+
+```{r}
+render_report(output_dir = "/Users/michaelfive/Library/CloudStorage/GoogleDrive-wuzezhen33@gmail.com/My Drive/WB Armenia Study/Reports/wave1/auto-generated",
+               output_file = "Report_gad_student_baseline.docx",
+               parameters = list(
+                 # set R code print options
+                 printcode = FALSE,
+                 printwarning = FALSE,
+                 storecache = FALSE,
+
+                 # set report overall parameters
+                 template = here::here("Mplus/wave1/gad_student_1/input_gad_student_1.xlsx"),
+                 set_title = "Measurement Report - GAD Baseline (Student)",
+                 set_author = "Zezhen Wu",
+
+                 # select report sections
+                 item = TRUE,
+                 descriptive = TRUE,
+                 ds_plot = TRUE,
+                 correlation_matrix_lg = FALSE,
+                 correlation_matrix_bivar = FALSE,
+                 correlation_matrix_item = TRUE, # BE CAREFUL! This might crash the document.
+                 efa_screeplot = FALSE,
+                 cfa_model_fit = TRUE,
+                 cfa_model_plot = TRUE,
+                 cfa_model_parameters = TRUE,
+                 cfa_model_thresholds = FALSE, # default is to mute the thresholds as the table can get very long
+                 cfa_r2 = FALSE,
+                 internal_reliability = TRUE,
+                 summary_item_statistics = TRUE,
+                 item_total_statistics = TRUE,
+                 inv_tx = FALSE,
+                 inv_gender = FALSE,
+                 inv_age = FALSE,
+                 inv_lg = FALSE)
+                 )
+
+get.omega.bywave(model = "gad1_student_cfa.out",
+                 path = here::here("Mplus/wave1/gad_student_1"))
+```
+
+### PHQ Time 1
+
+```{r}
+runModels(
+  "Mplus/wave1/phq_student_1/phq1_student_cfa.inp",
+  recursive=TRUE)
+```
+
+```{r}
+render_report(output_dir = "/Users/michaelfive/Library/CloudStorage/GoogleDrive-wuzezhen33@gmail.com/My Drive/WB Armenia Study/Reports/wave1/auto-generated",
+               output_file = "Report_phq_student_baseline.docx",
+               parameters = list(
+                 # set R code print options
+                 printcode = FALSE,
+                 printwarning = FALSE,
+                 storecache = FALSE,
+
+                 # set report overall parameters
+                 template = here::here("Mplus/wave1/phq_student_1/input_phq_student_1.xlsx"),
+                 set_title = "Measurement Report - PHQ-8 Baseline (Student)",
+                 set_author = "Zezhen Wu",
+
+                 # select report sections
+                 item = TRUE,
+                 descriptive = TRUE,
+                 ds_plot = TRUE,
+                 correlation_matrix_lg = FALSE,
+                 correlation_matrix_bivar = FALSE,
+                 correlation_matrix_item = TRUE, # BE CAREFUL! This might crash the document.
+                 efa_screeplot = FALSE,
+                 cfa_model_fit = TRUE,
+                 cfa_model_plot = TRUE,
+                 cfa_model_parameters = TRUE,
+                 cfa_model_thresholds = FALSE, # default is to mute the thresholds as the table can get very long
+                 cfa_r2 = FALSE,
+                 internal_reliability = TRUE,
+                 summary_item_statistics = FALSE,
+                 item_total_statistics = TRUE,
+                 inv_tx = FALSE,
+                 inv_gender = FALSE,
+                 inv_age = FALSE,
+                 inv_lg = FALSE)
+                 )
+
+get.omega.bywave(model = "phq1_student_cfa.out",
+                 path = here::here("Mplus/wave1/phq_student_1"))
+```
+
+### GHQ Time 1
+
+```{r}
+runModels(
+  "Mplus/wave1/ghq_student_1/ghq1_student_efa.inp",
+  recursive=TRUE)
+
+# one-factor model does not fit well
+runModels(
+  "Mplus/wave1/ghq_student_1/ghq1_student_cfa.inp",
+  recursive=TRUE)
+
+# positive and negative items in two factors
+runModels(
+  "Mplus/wave1/ghq_student_1/ghq1_student_cfa1.inp",
+  recursive=TRUE)
+```
+
+```{r}
+render_report(output_dir = "/Users/michaelfive/Library/CloudStorage/GoogleDrive-wuzezhen33@gmail.com/My Drive/WB Armenia Study/Reports/wave1/auto-generated",
+               output_file = "Report_ghq_student_baseline.docx",
+               parameters = list(
+                 # set R code print options
+                 printcode = FALSE,
+                 printwarning = FALSE,
+                 storecache = FALSE,
+
+                 # set report overall parameters
+                 template = here::here("Mplus/wave1/ghq_student_1/input_ghq_student_1.xlsx"),
+                 set_title = "Measurement Report - GHQ-12 Baseline (Student)",
+                 set_author = "Zezhen Wu",
+
+                 # select report sections
+                 item = TRUE,
+                 descriptive = TRUE,
+                 ds_plot = TRUE,
+                 correlation_matrix_lg = FALSE,
+                 correlation_matrix_bivar = FALSE,
+                 correlation_matrix_item = TRUE, # BE CAREFUL! This might crash the document.
+                 efa_screeplot = TRUE,
+                 cfa_model_fit = TRUE,
+                 cfa_model_plot = TRUE,
+                 cfa_model_parameters = TRUE,
+                 cfa_model_thresholds = FALSE, # default is to mute the thresholds as the table can get very long
+                 cfa_r2 = FALSE,
+                 internal_reliability = TRUE,
+                 summary_item_statistics = FALSE,
+                 item_total_statistics = TRUE,
+                 inv_tx = FALSE,
+                 inv_gender = FALSE,
+                 inv_age = FALSE,
+                 inv_lg = FALSE)
+                 )
+
+get.omega.bywave(model = "ghq1_student_cfa1.out",
+                 path = here::here("Mplus/wave1/ghq_student_1"))
+```
+
+
+### ERICA Time 1
+```{r}
+# original three-factor structure has terrible fit in the new sample
+runModels(
+  "Mplus/wave1/erica_student_1/erica1_student_cfa.inp",
+  recursive=TRUE)
+
+# all but one item has > 0.5 loading in emotional self-awareness and situation responsiveness, so in this model I only kept all items from emotional control subscale, which fits well (full sample)
+runModels(
+  "Mplus/wave1/erica_student_1/erica1_student_cfa1.inp",
+  recursive=TRUE)
+
+# EFA suggests 2 factors
+runModels(
+  "Mplus/wave1/erica_student_1/erica1_student_efa.inp",
+  recursive=TRUE)
+
+# based on EFA, it seems that the positively and negative worded items loaded onto two separate factors, which again fails to fit
+runModels(
+  "Mplus/wave1/erica_student_1/erica1_student_cfa2.inp",
+  recursive=TRUE)
+
+# Decision: remove all factor 2 and 3 items and keep factor 1; if emotion is still something that you wish to measure, choose another emotion awareness scale
+```
+
+```{r}
+render_report(output_dir = "/Users/michaelfive/Library/CloudStorage/GoogleDrive-wuzezhen33@gmail.com/My Drive/WB Armenia Study/Reports/wave1/auto-generated",
+               output_file = "Report_erica_student_baseline (1-factor).docx",
+               parameters = list(
+                 # set R code print options
+                 printcode = FALSE,
+                 printwarning = FALSE,
+                 storecache = FALSE,
+
+                 # set report overall parameters
+                 template = here::here("Mplus/wave1/erica_student_1/input_erica_student_1factor_1.xlsx"),
+                 set_title = "Measurement Report - ERICA Baseline (Student)",
+                 set_author = "Zezhen Wu",
+
+                 # select report sections
+                 item = TRUE,
+                 descriptive = TRUE,
+                 ds_plot = TRUE,
+                 correlation_matrix_lg = FALSE,
+                 correlation_matrix_bivar = FALSE,
+                 correlation_matrix_item = TRUE, # BE CAREFUL! This might crash the document.
+                 efa_screeplot = TRUE,
+                 cfa_model_fit = TRUE,
+                 cfa_model_plot = TRUE,
+                 cfa_model_parameters = TRUE,
+                 cfa_model_thresholds = FALSE, # default is to mute the thresholds as the table can get very long
+                 cfa_r2 = FALSE,
+                 internal_reliability = TRUE,
+                 summary_item_statistics = FALSE,
+                 item_total_statistics = TRUE,
+                 inv_tx = FALSE,
+                 inv_gender = FALSE,
+                 inv_age = FALSE,
+                 inv_lg = FALSE)
+                 )
+
+ get.omega.bywave(model = "erica1_student_cfa1.out",
+                 path = here::here("Mplus/wave1/erica_student_1"))
+```
+
+### SSWQ Time 1
+
+```{r}
+runModels(
+  "Mplus/wave1/sswq_student_1/sswq1_student_cfa.inp",
+  recursive=TRUE)
+```
+
+```{r}
+render_report(output_dir = "/Users/michaelfive/Library/CloudStorage/GoogleDrive-wuzezhen33@gmail.com/My Drive/WB Armenia Study/Reports/wave1/auto-generated",
+               output_file = "Report_sswq_student_baseline.docx",
+               parameters = list(
+                 # set R code print options
+                 printcode = FALSE,
+                 printwarning = FALSE,
+                 storecache = FALSE,
+
+                 # set report overall parameters
+                 template = here::here("Mplus/wave1/sswq_student_1/input_sswq_student_1.xlsx"),
+                 set_title = "Measurement Report - SSWQ Baseline (Student)",
+                 set_author = "Zezhen Wu",
+
+                 # select report sections
+                 item = TRUE,
+                 descriptive = TRUE,
+                 ds_plot = TRUE,
+                 correlation_matrix_lg = FALSE,
+                 correlation_matrix_bivar = FALSE,
+                 correlation_matrix_item = TRUE, # BE CAREFUL! This might crash the document.
+                 efa_screeplot = FALSE,
+                 cfa_model_fit = TRUE,
+                 cfa_model_plot = TRUE,
+                 cfa_model_parameters = TRUE,
+                 cfa_model_thresholds = FALSE, # default is to mute the thresholds as the table can get very long
+                 cfa_r2 = FALSE,
+                 internal_reliability = TRUE,
+                 summary_item_statistics = FALSE,
+                 item_total_statistics = TRUE,
+                 inv_tx = FALSE,
+                 inv_gender = FALSE,
+                 inv_age = FALSE,
+                 inv_lg = FALSE)
+                 )
+
+get.omega.bywave(model = "sswq1_student_cfa.out",
+                 path = here::here("Mplus/wave1/sswq_student_1"))
+```
+
+
+### Attitudes Time 1
+
+```{r}
+# terrible fit
+runModels(
+  "Mplus/wave1/atti_student_1/atti1_student_cfa.inp",
+  recursive=TRUE)
+
+# remove item 1-2 since factor loading is low
+runModels(
+  "Mplus/wave1/atti_student_1/atti1_student_cfa1.inp",
+  recursive=TRUE)
+```
+
+```{r}
+render_report(output_dir = "/Users/michaelfive/Library/CloudStorage/GoogleDrive-wuzezhen33@gmail.com/My Drive/WB Armenia Study/Reports/wave1/auto-generated",
+               output_file = "Report_atti_student_baseline.docx",
+               parameters = list(
+                 # set R code print options
+                 printcode = FALSE,
+                 printwarning = FALSE,
+                 storecache = FALSE,
+
+                 # set report overall parameters
+                 template = here::here("Mplus/wave1/atti_student_1/input_atti_student_1.xlsx"),
+                 set_title = "Measurement Report - Attitudes Baseline (Student)",
+                 set_author = "Zezhen Wu",
+
+                 # select report sections
+                 item = TRUE,
+                 descriptive = TRUE,
+                 ds_plot = TRUE,
+                 correlation_matrix_lg = FALSE,
+                 correlation_matrix_bivar = FALSE,
+                 correlation_matrix_item = TRUE, # BE CAREFUL! This might crash the document.
+                 efa_screeplot = FALSE,
+                 cfa_model_fit = TRUE,
+                 cfa_model_plot = TRUE,
+                 cfa_model_parameters = TRUE,
+                 cfa_model_thresholds = FALSE, # default is to mute the thresholds as the table can get very long
+                 cfa_r2 = FALSE,
+                 internal_reliability = TRUE,
+                 summary_item_statistics = FALSE,
+                 item_total_statistics = TRUE,
+                 inv_tx = FALSE,
+                 inv_gender = FALSE,
+                 inv_age = FALSE,
+                 inv_lg = FALSE)
+                 )
+
+get.omega.bywave(model = "atti1_student_cfa.out",
+                 path = here::here("Mplus/wave1/atti_student_1"))
+```
